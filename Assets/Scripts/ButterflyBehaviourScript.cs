@@ -2,14 +2,26 @@
 using System.Collections;
 
 public class ButterflyBehaviourScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
 	
+	public float mSpeed;
+	private CharacterController mCharacterController;
+	public Animation mAnimation;
+
+	void Start ()
+	{
+		mCharacterController = GetComponent<CharacterController>();
+		mAnimation = GetComponent<Animation>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate ()
+	{
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+		
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		
+		mCharacterController.SimpleMove (movement * mSpeed);
+
+		mAnimation.Play("Take 001");
 	}
 }
