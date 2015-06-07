@@ -154,34 +154,6 @@ Transform:
   - {fileID: 1346821005}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &750591783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 750591784}
-  m_Layer: 0
-  m_Name: Butterfly
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &750591784
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 750591783}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.6625977, y: 104.199844, z: 282.639557}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 344642105}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!1 &1040206331
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,11 +440,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695045592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 181.960007, y: 3, z: 354.179993}
+  m_LocalPosition: {x: -.202590942, y: .815155029, z: -4.3535614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 344642105}
+  m_RootOrder: 2
 --- !u!114 &1695045598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,19 +461,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 750591784}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 119.5
+      value: 182.162598
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -102.014999
+      value: 2.18484497
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 75.8939972
+      value: 358.533569
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -529,6 +501,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
       propertyPath: m_TagString
+      value: Butterfly
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ad5878248fac71a48aa469475023f88a, type: 2}
+      propertyPath: m_Name
       value: Butterfly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
