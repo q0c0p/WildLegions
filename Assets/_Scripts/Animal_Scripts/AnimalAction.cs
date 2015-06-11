@@ -24,6 +24,7 @@ public class Follow : AnimalAction
 	{
 		MonoBehaviour.print ("I follow my master !");
 	}
+
 }
 public class WalkAround : AnimalAction
 {
@@ -31,6 +32,7 @@ public class WalkAround : AnimalAction
 	{
 		MonoBehaviour.print ("I walk around");
 	}
+
 }
 public class GoAwayFrom : AnimalAction
 {

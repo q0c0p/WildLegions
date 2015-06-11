@@ -25,24 +25,5 @@ public class AnimalController : MonoBehaviour {
 		movement_.move (this);
 	}
 
-	void onTriggerEnter(Collider other)
-	{
-		print ("something is there");
-		/*
-		if (other.gameObject.tag == "Player") {
-			print ("I go away from the player");
-			setAction(new GoAwayFrom(other.gameObject));
-		}
-		*/
-	}
-	void onTriggerStay(Collider other)
-	{
-		print ("something is there");
-		/*
-		if (other.gameObject.tag == "Player") {
-			print ("I go away from the player");
-			setAction(new GoAwayFrom(other.gameObject));
-		}
-		*/
-	}
+
 }

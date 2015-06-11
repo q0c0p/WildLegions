@@ -18,11 +18,12 @@ public class Run : AnimalMovement
 	public void move(AnimalController entity)
 	{
 		entity_ = entity;
-		speed = 0;
-		entity_.StartCoroutine("Movement", destination_);
+		speed = 2;
+		entity_.StartCoroutine(Movement(destination_));
 	}
 	IEnumerator Movement (Vector3 target)
 	{
+		target.y = 0;
 		while(Vector3.Distance(entity_.transform.position, target) > 0.05f)
 		{
 			entity_.transform.position = Vector3.Lerp(entity_.transform.position, target, speed * Time.deltaTime);
