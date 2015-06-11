@@ -2,21 +2,47 @@
 using System.Collections;
 
 public class AnimalController : MonoBehaviour {
-	private AnimalAction action;
+	private AnimalAction action_;
+	private AnimalMovement movement_;
 	public string animalName = "mouzou";
 	// Use this for initialization
 	void Start () {
-		action = new Follow();
-		action.playAction(this,gameObject);
 	}
-	public void doSomething()
-	{
-		action = new Eat();
-		action.playAction(this,gameObject);
-	}
+
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
+	public void setAction(AnimalAction action)
+	{
+		action_ = action;
+		action_.playAction(this);
+	}
+	public void setMovement(AnimalMovement movement)
+	{
+		movement_ = movement;
+		movement_.move (this);
+	}
+
+	void onTriggerEnter(Collider other)
+	{
+		print ("something is there");
+		/*
+		if (other.gameObject.tag == "Player") {
+			print ("I go away from the player");
+			setAction(new GoAwayFrom(other.gameObject));
+		}
+		*/
+	}
+	void onTriggerStay(Collider other)
+	{
+		print ("something is there");
+		/*
+		if (other.gameObject.tag == "Player") {
+			print ("I go away from the player");
+			setAction(new GoAwayFrom(other.gameObject));
+		}
+		*/
+	}
 }

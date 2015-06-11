@@ -2,15 +2,21 @@
 using System.Collections;
 
 public class NearZoneTrigger : MonoBehaviour {
-	AnimalController animal;
+	private AnimalController animal_;
+	private SphereCollider collider_;
+	public float radiusZone = 2.0f;
 	// Use this for initialization
 	void Start () {
-		animal = GetComponentsInParent<AnimalController> ()[0];
-		animal.doSomething ();
+		animal_ = GetComponentInParent<AnimalController> ();
+		collider_ = GetComponent<SphereCollider> ();
+		collider_.radius = radiusZone;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void onTriggerEnter(Collider other)
+	{
+		print ("something is there");
+		if (other.tag == "Player") {
+			print ("I go away from the player");
+			animal_.setAction(new GoAwayFrom(other.gameObject));
+		}
 	}
 }
