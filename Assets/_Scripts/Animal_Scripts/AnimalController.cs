@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class AnimalController : MonoBehaviour {
-	private AnimalAction action_;
-	private AnimalMovement movement_;
+	private IAnimalAction action_;
+	private IAnimalMovement movement_;
 	public string animalName = "mouzou";
 	// Use this for initialization
 	void Start () {
@@ -14,15 +14,15 @@ public class AnimalController : MonoBehaviour {
 	
 	}
 
-	public void setAction(AnimalAction action)
+	public void setAction(IAnimalAction action)
 	{
 		action_ = action;
-		action_.playAction(this);
+		action_.playAction();
 	}
-	public void setMovement(AnimalMovement movement)
+	public void setMovement(IAnimalMovement movement)
 	{
 		movement_ = movement;
-		movement_.move (this);
+		movement_.move ();
 	}
 
 
