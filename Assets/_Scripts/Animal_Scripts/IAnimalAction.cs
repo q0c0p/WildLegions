@@ -4,11 +4,19 @@ using System.Collections;
 public interface IAnimalAction {
 	void playAction();
 }
+
+public abstract class AnimalAction : IAnimalAction
+{
+	public virtual void playAction()
+	{
+	}
+}
+
 public class Eat : IAnimalAction
 {
 	private AnimalController entity_;
 	public Eat (AnimalController entity)
-	{
+	{ 
 		entity_ = entity;
 	}
 
@@ -26,7 +34,7 @@ public class Attack : IAnimalAction
 	}
 	public void playAction()
 	{
-		MonoBehaviour.print ("Attack!");
+		MonoBehaviour.print ("Attack!"+entity_.animalName);
 	}
 }
 public class Follow : IAnimalAction
@@ -38,7 +46,7 @@ public class Follow : IAnimalAction
 	}
 	public void playAction()
 	{
-		MonoBehaviour.print ("I follow my master !");
+		MonoBehaviour.print ("I follow my master !"+entity_.animalName);
 	}
 
 }
@@ -51,11 +59,11 @@ public class WalkAround : IAnimalAction
 	}
 	public void playAction()
 	{
-		MonoBehaviour.print ("I walk around");
+		MonoBehaviour.print ("I walk around and i am "+entity_.animalName);
 	}
 
 }
-public class GoAwayFrom : IAnimalAction
+public class GoAwayFrom : AnimalAction
 {
 	GameObject other_;
 	float distance_;
@@ -72,11 +80,14 @@ public class GoAwayFrom : IAnimalAction
 		other_ = other;
 		distance_ = 5f;
 	}
-	public void playAction()
+	public override void playAction()
 	{
 		Vector3 direction = entity_.transform.position - other_.transform.position;
 		direction = direction.normalized * distance_;
 		entity_.setMovement (new Run (direction + entity_.transform.position,entity_));
+	}
+	public void stopAction()
+	{
 	}
 }
 

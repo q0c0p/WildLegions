@@ -21,6 +21,8 @@ public class AnimalController : MonoBehaviour {
 	}
 	public void setMovement(IAnimalMovement movement)
 	{
+		if(movement_ != null)
+			movement_.stop ();
 		movement_ = movement;
 		movement_.move ();
 	}
