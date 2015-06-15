@@ -14,7 +14,6 @@ public class PerceptionAnalyser : MonoBehaviour {
 		collider_ = GetComponent<SphereCollider> ();
 		collider_.radius = radiusZone;
 	}
-
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
