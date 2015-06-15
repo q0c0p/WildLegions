@@ -7,47 +7,46 @@ public interface IMovement{
 	bool isFinished();
 }
 
-public class LinearMovement : IMovement
+public abstract class MovementTo : IMovement
 {
-	protected float speed_ = 7f;
+	public float speed_ = 3f;
+	public float epsilon = 0.5f;
 	protected GameObject entity_;
-	Vector3 destination_;
-	Vector3 start_;
+	protected Vector3 destination_;
+	public virtual void move()
+	{
+	}
+	public virtual bool isFinished()
+	{
+		return (Vector3.Distance (entity_.transform.position, destination_) < epsilon);
+	}
+}
+
+public class LinearMovement : MovementTo
+{
 	public LinearMovement(GameObject entity , Vector3 destination)
 	{
 		destination.y = 0;
 		entity_ = entity;
-		start_ = entity_.transform.position;
 		destination_ = destination;
 	}
-	public void move()
+	public override void move()
 	{
 		//entity_.transform.position = Vector3.Lerp (start_, destination_, speed_ * Time.deltaTime);
-		entity_.transform.position += (destination_-start_) * Time.deltaTime;
-	}
-	public bool isFinished()
-	{
-		return (Vector3.Distance (entity_.transform.position, destination_) < 0.5);
+		entity_.transform.position += (destination_-entity_.transform.position).normalized * Time.deltaTime *  speed_;
 	}
 }
-public class LerpedMovement : IMovement
+public class LerpedMovement : MovementTo
 {
-	protected float speed_ = 3f;
-	protected GameObject entity_;
-	Vector3 destination_;
 	public LerpedMovement(GameObject entity , Vector3 destination)
 	{
 		destination.y = 0;
 		entity_ = entity;
 		destination_ = destination;
 	}
-	public void move()
+	public override void move()
 	{
 		entity_.transform.position = Vector3.Lerp (entity_.transform.position, destination_, speed_ * Time.deltaTime);
-	}
-	public bool isFinished()
-	{
-		return (Vector3.Distance (entity_.transform.position, destination_) < 0.5);
 	}
 }
 
