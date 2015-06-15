@@ -19,7 +19,7 @@ public class NearZoneTrigger : MonoBehaviour {
 	{
 		if (other.tag == "Player") {
 
-			animal_.setAction(new GoAwayFrom(other.gameObject));
+			animal_.setAction(new GoAwayFrom(other.gameObject,animal_));
 		}
 	}
 }

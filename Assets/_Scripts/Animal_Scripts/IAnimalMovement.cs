@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface AnimalMovement{
+public interface IAnimalMovement{
 	// Use this for initialization
-	void move(AnimalController entity);
+	void move();
 }
 
-public class Run : AnimalMovement
+public class Run : IAnimalMovement
 {
 	protected float speed;
 	protected AnimalController entity_;
 	Vector3 destination_;
-	public Run(Vector3 destination)
-	{
-		destination_ = destination;
-	}
-	public void move(AnimalController entity)
+	public Run(Vector3 destination, AnimalController entity)
 	{
 		entity_ = entity;
+		destination_ = destination;
+	}
+	public void move()
+	{
 		speed = 2;
 		entity_.StartCoroutine(Movement(destination_));
 	}
