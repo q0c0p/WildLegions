@@ -3,36 +3,45 @@ using System.Collections;
 
 public class PlayerControlerTest : MonoBehaviour {
 
-	Rigidbody playerRigidbody;
-	Vector3 movement;  
-	public float speed = 6f;
+	GameObject player_;
+	Vector3 movement_;  
+	public float speed_ = 6f;
+	public float rotateSpeed_ = 50f ;
+
+	public float smooth = 2.0F;
 	// Use this for initialization
 	void Start () {
-		playerRigidbody = GetComponent <Rigidbody> ();
+		player_ = GetComponent <GameObject> ();
 	}
 
 
 	void FixedUpdate ()
 	{
-		// Store the input axes.
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
-		
-		// Move the player around the scene.
-		Move (h, v);
+		Rotation ();
+		Move ();
+	}
+	
+	void Rotation ()
+	{
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			transform.Rotate(Vector3.up, rotateSpeed_ * Time.deltaTime);
+		}
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			transform.Rotate(Vector3.up, -rotateSpeed_ * Time.deltaTime);
+		}
 	}
 
-	void Move (float h, float v)
+	void Move ()
 	{
-		// Set the movement vector based on the axis input.
-		movement.Set (h, 0f, v);
-		
-		// Normalise the movement vector and make it proportional to the speed per second.
-		movement = movement.normalized * speed * Time.deltaTime;
-		
-		// Move the player to it's current position plus the movement.
-		playerRigidbody.MovePosition (transform.position + movement);
+		if (Input.GetKey (KeyCode.UpArrow)) {
+			transform.Translate(Vector3.forward* speed_ * Time.deltaTime);
+		}
+
+		if (Input.GetKey (KeyCode.DownArrow)) {
+			transform.Translate(Vector3.forward* -speed_ * Time.deltaTime);
+		}
 	}
+
 }
 
 

@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public float speed_ = 6f;            // The speed that the player will move at.
-	public float rotateSpeed_ ;	
 	private Vector3 moveDirection_ = Vector3.zero;                   // The vector to store the direction of the player's movement.
 	private Vector3 rightDirection_ = Vector3.zero;
 	Rigidbody playerRigidbody_;          // Reference to the player's rigidbody.
@@ -33,9 +32,6 @@ public class PlayerController : MonoBehaviour {
 		
 	void Move (float h, float v)
 	{
-		float horizontal = h * rotateSpeed_;
-		playerRigidbody_.transform.Rotate (0, horizontal, 0);
-
 		moveDirection_.Set (0, 0, v);
 
 		// Normalise the movement vector and make it proportional to the speed per second.
