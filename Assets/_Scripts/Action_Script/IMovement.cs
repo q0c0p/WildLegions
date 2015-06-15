@@ -5,12 +5,13 @@ public interface IMovement{
 	// Use this for initialization
 	void move();
 	bool isFinished();
+	void setEpsilon(float epsilon);
 }
 
 public abstract class MovementTo : IMovement
 {
 	public float speed_ = 3f;
-	public float epsilon = 0.5f;
+	public float epsilon_ = 1f;
 	protected GameObject entity_;
 	protected Vector3 destination_;
 	public virtual void move()
@@ -18,7 +19,11 @@ public abstract class MovementTo : IMovement
 	}
 	public virtual bool isFinished()
 	{
-		return (Vector3.Distance (entity_.transform.position, destination_) < epsilon);
+		return (Vector3.Distance (entity_.transform.position, destination_) < epsilon_);
+	}
+	public void setEpsilon(float epsilon)
+	{
+		epsilon_ = epsilon;
 	}
 }
 

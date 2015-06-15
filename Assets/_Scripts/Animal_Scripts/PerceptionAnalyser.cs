@@ -5,7 +5,7 @@ public class PerceptionAnalyser : MonoBehaviour {
 
 	private AnimalController animal_;
 	private SphereCollider collider_;
-	public float radiusZone = 7.0f;
+	public float radiusZone = 10.0f;
 	
 	// Use this for initialization
 	void Start () 
