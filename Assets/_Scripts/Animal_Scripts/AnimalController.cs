@@ -2,32 +2,29 @@
 using System.Collections;
 
 public class AnimalController : MonoBehaviour {
-	private IAnimalAction action_;
-	private IAnimalMovement movement_;
+	private IAgentAction action_;
 	public string animalName = "mouzou";
 	// Use this for initialization
 	void Start () {
+		action_ = null;
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
+		if (action_ != null)
+			action_.playAction();
 	}
 
-	public void setAction(IAnimalAction action)
+	public void setAction(IAgentAction action)
 	{
+		/* Always delete properly the current action we need it to stop the coroutines */
 		if (action_ != null)
 			action_.stopAction ();
+
 		action_ = action;
-		action_.playAction();
 	}
-	public void setMovement(IAnimalMovement movement)
-	{
-		if(movement_ != null)
-			movement_.stop ();
-		movement_ = movement;
-		movement_.move ();
-	}
+
 
 
 }
