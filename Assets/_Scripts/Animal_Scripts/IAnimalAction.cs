@@ -3,64 +3,75 @@ using System.Collections;
 
 public interface IAnimalAction {
 	void playAction();
+	void stopAction();
 }
-public class Eat : IAnimalAction
+
+public abstract class AnimalAction : IAnimalAction
 {
-	private AnimalController entity_;
-	public Eat (AnimalController entity)
+	
+	protected AnimalController entity_;
+	public virtual void playAction()
 	{
+
+	}
+	public void stopAction()
+	{
+
+	}
+}
+
+public class Eat : AnimalAction
+{
+	public Eat (AnimalController entity)
+	{ 
 		entity_ = entity;
 	}
 
-	public void playAction()
+	public override void playAction()
 	{
 		MonoBehaviour.print ("I eat !"+entity_.animalName);
 	}
 }
-public class Attack : IAnimalAction
+public class Attack : AnimalAction
 {
-	private AnimalController entity_;
 	public Attack (AnimalController entity)
 	{
 		entity_ = entity;
 	}
-	public void playAction()
+	public override void playAction()
 	{
-		MonoBehaviour.print ("Attack!");
+		MonoBehaviour.print ("Attack!"+entity_.animalName);
 	}
 }
-public class Follow : IAnimalAction
+public class Follow : AnimalAction
 {
-	private AnimalController entity_;
 	public Follow (AnimalController entity)
 	{
 		entity_ = entity;
 	}
-	public void playAction()
+	public override void playAction()
 	{
-		MonoBehaviour.print ("I follow my master !");
+		MonoBehaviour.print ("I follow my master !"+entity_.animalName);
 	}
 
 }
-public class WalkAround : IAnimalAction
+public class WalkAround : AnimalAction
 {
-	private AnimalController entity_;
 	public WalkAround (AnimalController entity)
 	{
 		entity_ = entity;
 	}
-	public void playAction()
+	public override void playAction()
 	{
-		MonoBehaviour.print ("I walk around");
+		MonoBehaviour.print ("I walk around and i am "+entity_.animalName);
 	}
 
 }
-public class GoAwayFrom : IAnimalAction
+public class GoAwayFrom : AnimalAction
 {
 	GameObject other_;
 	float distance_;
-	private AnimalController entity_;
-	public GoAwayFrom(GameObject other,float distance,AnimalController entity)
+	public GoAwayFrom(GameObject other,AnimalController entity,float distance)
 	{
 		entity_ = entity;
 		other_ = other;
@@ -72,11 +83,12 @@ public class GoAwayFrom : IAnimalAction
 		other_ = other;
 		distance_ = 5f;
 	}
-	public void playAction()
+	public override void playAction()
 	{
 		Vector3 direction = entity_.transform.position - other_.transform.position;
 		direction = direction.normalized * distance_;
 		entity_.setMovement (new Run (direction + entity_.transform.position,entity_));
 	}
+
 }
 

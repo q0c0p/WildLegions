@@ -11,16 +11,20 @@ public class AnimalController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public void setAction(IAnimalAction action)
 	{
+		if (action_ != null)
+			action_.stopAction ();
 		action_ = action;
 		action_.playAction();
 	}
 	public void setMovement(IAnimalMovement movement)
 	{
+		if(movement_ != null)
+			movement_.stop ();
 		movement_ = movement;
 		movement_.move ();
 	}

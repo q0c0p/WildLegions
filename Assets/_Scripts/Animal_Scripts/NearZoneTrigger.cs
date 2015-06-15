@@ -18,7 +18,6 @@ public class NearZoneTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-
 			animal_.setAction(new GoAwayFrom(other.gameObject,animal_));
 		}
 	}
