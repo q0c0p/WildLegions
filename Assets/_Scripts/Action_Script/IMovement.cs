@@ -32,21 +32,18 @@ public class LinearMovement : IMovement
 }
 public class LerpedMovement : IMovement
 {
-	protected float speed_ = 7f;
+	protected float speed_ = 3f;
 	protected GameObject entity_;
 	Vector3 destination_;
-	Vector3 start_;
 	public LerpedMovement(GameObject entity , Vector3 destination)
 	{
 		destination.y = 0;
 		entity_ = entity;
-		start_ = entity_.transform.position;
 		destination_ = destination;
 	}
 	public void move()
 	{
-		//entity_.transform.position = Vector3.Lerp (start_, destination_, speed_ * Time.deltaTime);
-		entity_.transform.position += (destination_-start_) * Time.deltaTime;
+		entity_.transform.position = Vector3.Lerp (entity_.transform.position, destination_, speed_ * Time.deltaTime);
 	}
 	public bool isFinished()
 	{
