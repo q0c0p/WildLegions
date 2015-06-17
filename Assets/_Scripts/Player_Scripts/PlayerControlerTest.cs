@@ -14,7 +14,11 @@ public class PlayerControlerTest : MonoBehaviour {
 		player_ = GetComponent <GameObject> ();
 	}
 
-
+	/*void Update () {
+		if (Input.GetKey (KeyCode.I)) {
+			;
+		}
+	}*/
 	void FixedUpdate ()
 	{
 		Rotation ();

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PerceptionAnalyser : MonoBehaviour {
+public class ExternalPerception : MonoBehaviour {
 
 	private AnimalController animal_;
 	private SphereCollider collider_;
