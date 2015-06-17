@@ -3,20 +3,23 @@ using System.Collections;
 
 public class LookFor : AnimalAction {
 
-	GameObject other_;
-	string tag_;
+	WalkAround action_;
 
 	public LookFor(GameObject entity, string tag)
 	{
 		entity_ = entity;
-		tag_ = tag;
-		other_ = null;
+		entity_.GetComponentInChildren<ExternalPerception> ().setInterestTag (tag);
+		action_ = new WalkAround (entity);
 	}
 	public LookFor(GameObject entity, GameObject other)
 	{
 		entity_ = entity;
-		other_ = other;
-		tag_ = null;
+		entity_.GetComponentInChildren<ExternalPerception> ().setInterestGO (other);
+		action_ = new WalkAround (entity);
+	}
+	public override void playAction()
+	{
+		action_.playAction ();
 	}
 	
 }
