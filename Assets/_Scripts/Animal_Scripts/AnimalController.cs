@@ -25,6 +25,4 @@ public class AnimalController : MonoBehaviour {
 		action_ = action;
 	}
 
-
-
 }

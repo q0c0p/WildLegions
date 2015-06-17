@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ExternalPerception : MonoBehaviour {
@@ -6,6 +6,8 @@ public class ExternalPerception : MonoBehaviour {
 	private AnimalController animal_;
 	private SphereCollider collider_;
 	public float radiusZone = 10.0f;
+	private GameObject interestGO_;
+	private string interestTag_;
 	
 	// Use this for initialization
 	void Start () 
@@ -13,11 +15,35 @@ public class ExternalPerception : MonoBehaviour {
 		animal_ = GetComponentInParent<AnimalController> ();
 		collider_ = GetComponent<SphereCollider> ();
 		collider_.radius = radiusZone;
+		interestGO_ = null;
+		interestTag_ = null;
 	}
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
 			animal_.setAction(new Follow(animal_.gameObject,other.gameObject));
 		}
+		if (interestTag_ != null) {
+			if (other.tag == interestTag_)
+			{
+				animal_.setAction(new GoToSmth(animal_.gameObject,other.gameObject));
+			}
+		}
+		if (interestGO_ != null) {
+			if (other.gameObject == interestGO_)
+			{
+				animal_.setAction(new GoToSmth(animal_.gameObject,other.gameObject));
+			}
+		}
+	}
+	public void setInterestTag(string interest)
+	{
+		interestGO_ = null;
+		interestTag_ = interest;
+	}
+	public void setInterestGO(GameObject interest)
+	{
+		interestTag_ = null;
+		interestGO_ = interest;
 	}
 }
