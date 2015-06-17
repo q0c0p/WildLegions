@@ -6,7 +6,7 @@ public class AnimalController : MonoBehaviour {
 	public string animalName = "mouzou";
 	// Use this for initialization
 	void Start () {
-		action_ = null;
+		action_ = new WalkAround(gameObject);
 	}
 
 	// Update is called once per frame
