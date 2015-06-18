@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Butterfly
   - Terrain
+  - Food
   layers:
   - Default
   - TransparentFX

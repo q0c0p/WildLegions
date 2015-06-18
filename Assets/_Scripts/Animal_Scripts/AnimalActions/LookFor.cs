@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class LookFor : AnimalAction {
@@ -9,13 +9,19 @@ public class LookFor : AnimalAction {
 	{
 		entity_ = entity;
 		entity_.GetComponentInChildren<ExternalPerception> ().setInterestTag (tag);
-		action_ = new WalkAround (entity);
+		startAction ();
 	}
 	public LookFor(GameObject entity, GameObject other)
 	{
 		entity_ = entity;
 		entity_.GetComponentInChildren<ExternalPerception> ().setInterestGO (other);
-		action_ = new WalkAround (entity);
+		startAction ();
+
+	}
+	private void startAction()
+	{
+		action_ = new WalkAround (entity_);
+		action_.coef_ = 20;
 	}
 	public override void playAction()
 	{
