@@ -14,6 +14,10 @@ public abstract class MovementTo : IMovement
 	public float epsilon_ = 1f;
 	protected GameObject entity_;
 	protected Vector3 destination_;
+	public MovementTo()
+	{
+
+	}
 	public virtual void move()
 	{
 	}
@@ -34,12 +38,16 @@ public class LinearMovement : MovementTo
 		destination.y = 0;
 		entity_ = entity;
 		destination_ = destination;
+		NavMeshAgent nav = entity_.GetComponent<NavMeshAgent> ();
+		nav.SetDestination (destination_);
 	}
+
 	public override void move()
 	{
 		//entity_.transform.position = Vector3.Lerp (start_, destination_, speed_ * Time.deltaTime);
 		entity_.transform.position += (destination_-entity_.transform.position).normalized * Time.deltaTime *  speed_;
 	}
+
 }
 public class LerpedMovement : MovementTo
 {
@@ -48,10 +56,14 @@ public class LerpedMovement : MovementTo
 		destination.y = 0;
 		entity_ = entity;
 		destination_ = destination;
+		NavMeshAgent nav = entity_.GetComponent<NavMeshAgent> ();
+		nav.SetDestination (destination_);
 	}
+
 	public override void move()
 	{
 		entity_.transform.position = Vector3.Lerp (entity_.transform.position, destination_, speed_ * Time.deltaTime);
 	}
+
 }
 

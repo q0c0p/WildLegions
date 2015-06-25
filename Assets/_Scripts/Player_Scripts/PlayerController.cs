@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -7,20 +7,36 @@ public class PlayerController : MonoBehaviour {
 	Vector3 movement_;  
 	public float speed_ = 6f;
 	public float rotateSpeed_ = 50f ;
+	private PlayerAction action_;
 	
 	public float smooth = 2.0F;
 	// Use this for initialization
 	void Start () {
 		player_ = GetComponent <GameObject> ();
 	}
-	
+
+	public IAgentAction getAction()
+	{
+		return action_;
+	}
 	
 	void FixedUpdate ()
 	{
 		Rotation ();
 		Move ();
+		GetKeyboardInput ();
 	}
-	
+
+	void GetKeyboardInput()
+	{
+		if (Input.GetButtonDown ("Fire1")) {
+			action_ = new PlayerAttack();
+		}
+		if (Input.GetButtonDown ("Fire2")) {
+			action_ = new PlayerFeed();
+		}
+	}
+
 	void Rotation ()
 	{
 		if (Input.GetKey (KeyCode.RightArrow)) {

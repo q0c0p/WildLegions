@@ -36,6 +36,23 @@ public class ExternalPerception : MonoBehaviour {
 			}
 		}
 	}
+	void OnTriggerStay(Collider other)
+	{
+		if (other.tag == "Player") {
+			IAgentAction action = other.gameObject.GetComponent<PlayerController>().getAction();
+			if(action != null)
+			{
+				if(action is PlayerAttack)
+				{
+					GetComponentInParent<Memory>().updateMemory(action);
+				}
+				if(action is PlayerFeed)
+				{
+					GetComponentInParent<Memory>().updateMemory(action);
+				}
+			}
+		}
+	}
 	public void setInterestTag(string interest)
 	{
 		interestGO_ = null;

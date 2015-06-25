@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AnimalController : MonoBehaviour {
 	private IAgentAction action_;
-	public string animalName = "mouzou";
+	public string animalName = "mougou";
 	// Use this for initialization
 	void Start () {
 		action_ = new WalkAround(gameObject);
@@ -18,11 +18,16 @@ public class AnimalController : MonoBehaviour {
 
 	public void setAction(IAgentAction action)
 	{
-		/* Always delete properly the current action we need it to stop the coroutines */
+		/* Always delete properly the current action we need it to stop the coroutines if any  */
 		if (action_ != null)
 			action_.stopAction ();
 
 		action_ = action;
+	}
+
+	public IAgentAction getAction()
+	{
+		return action_;
 	}
 
 }

@@ -5,5 +5,6 @@ public interface IAgentAction {
 	void playAction();
 	void stopAction();
 	IMovement getMovement();
+	long getId();
 }
 
