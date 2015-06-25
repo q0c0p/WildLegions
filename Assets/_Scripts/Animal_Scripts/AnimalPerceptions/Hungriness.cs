@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Hungriness : MonoBehaviour, IPerception {
 
@@ -9,6 +10,8 @@ public class Hungriness : MonoBehaviour, IPerception {
 	float behaviourPersistence_;
 	float hungrinessProgressRate_;
 	bool isLookingForFood;
+
+	public Slider slider_;
 
 	void Start () {
 		isLookingForFood = false;
@@ -21,14 +24,14 @@ public class Hungriness : MonoBehaviour, IPerception {
 	}
 
 	void Update() {
-
+		slider_.value = Mathf.MoveTowards (slider_.value, 100.0f, 0.15f);
 	}
 
 	IEnumerator HungerCoroutine () {
 
-		while (true) {
+		while (true && globalHunger_ >0) {
 			DecreaseHungerState (hungrinessProgressRate_);
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (2f);
 		}
 
 
