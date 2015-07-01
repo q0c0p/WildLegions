@@ -45,6 +45,7 @@ public class ExternalPerception : MonoBehaviour {
 				if(action is PlayerAttack)
 				{
 					GetComponentInParent<Memory>().updateMemory(action);
+
 				}
 				if(action is PlayerFeed)
 				{
