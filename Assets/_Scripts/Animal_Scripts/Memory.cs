@@ -16,18 +16,18 @@ public class Memory : MonoBehaviour {
 
 	public void updateMemory(IAgentAction paction)
 	{
-		bool alreadyThere = false;
-		int size = 0;
+		actions_.Add (paction);
+		if (actions_.Count > sizeMax) {
+		}
+	}
+	public bool isInMemory(IAgentAction paction)
+	{
 		foreach ( IAgentAction action in actions_)
 		{
 			if(action.getId() == paction.getId())
-				alreadyThere = true;
-			size++;
+				return true;
 		}
-		if(!alreadyThere)
-			actions_.Add (paction);
-		if (size > sizeMax) {
-		}
+		return false;
 	}
 
 }

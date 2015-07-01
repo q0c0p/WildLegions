@@ -14,6 +14,7 @@ public class AnimalController : MonoBehaviour {
 
 		if (action_ != null)
 			action_.playAction();
+
 	}
 
 	public void setAction(IAgentAction action)

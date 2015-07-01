@@ -25,6 +25,11 @@ public abstract class AnimalAction : IAgentAction
 		}
 		*/
 	}
+
+	public virtual IPerception isPerceived()
+	{
+		return null;
+	}
 	public virtual void stopAction()
 	{
 		

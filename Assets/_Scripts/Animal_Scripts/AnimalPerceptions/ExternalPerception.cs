@@ -2,17 +2,19 @@ using UnityEngine;
 using System.Collections;
 
 public class ExternalPerception : MonoBehaviour {
-
+	
+	public float radiusZone = 10.0f;
 	private AnimalController animal_;
 	private SphereCollider collider_;
-	public float radiusZone = 10.0f;
 	private GameObject interestGO_;
 	private string interestTag_;
+	private AffectiveState affectiveState_;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		animal_ = GetComponentInParent<AnimalController> ();
+		affectiveState_ = GetComponentInParent<AffectiveState> ();
 		collider_ = GetComponent<SphereCollider> ();
 		collider_.radius = radiusZone;
 		interestGO_ = null;
@@ -42,14 +44,18 @@ public class ExternalPerception : MonoBehaviour {
 			IAgentAction action = other.gameObject.GetComponent<PlayerController>().getAction();
 			if(action != null)
 			{
-				if(action is PlayerAttack)
+				
+				if(GetComponentInParent<Memory>().isInMemory(action))
 				{
-					GetComponentInParent<Memory>().updateMemory(action);
 
 				}
-				if(action is PlayerFeed)
+				else
 				{
 					GetComponentInParent<Memory>().updateMemory(action);
+					if(action.isPerceived() != null)
+					{
+						affectiveState_.update(action);
+					}
 				}
 			}
 		}

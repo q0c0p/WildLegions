@@ -16,4 +16,8 @@ public class AffectiveState : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void update(IAgentAction action)
+	{
+	}
 }

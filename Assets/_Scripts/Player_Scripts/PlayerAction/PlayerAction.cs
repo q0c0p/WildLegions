@@ -15,6 +15,10 @@ public abstract class PlayerAction : IAgentAction {
 	public void stopAction()
 	{
 	}
+	public virtual IPerception isPerceived()
+	{
+		return null;
+	}
 	public IMovement getMovement()
 	{
 		return null;
@@ -31,6 +35,10 @@ public class PlayerAttack : PlayerAction
 	{
 		setId ();
 	}
+	public override IPerception isPerceived()
+	{
+		return null;
+	}
 }
 
 public class PlayerFeed : PlayerAction
@@ -38,6 +46,10 @@ public class PlayerFeed : PlayerAction
 	public PlayerFeed()
 	{
 		setId ();
+	}
+	public override IPerception isPerceived()
+	{
+		return null;
 	}
 }
 
