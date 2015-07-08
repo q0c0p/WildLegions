@@ -18,7 +18,13 @@ public class Memory : MonoBehaviour {
 	{
 		actions_.Add (paction);
 		if (actions_.Count > sizeMax) {
+
 		}
+		foreach ( IAgentAction action in actions_)
+		{
+		}
+
+
 	}
 	public bool isInMemory(IAgentAction paction)
 	{

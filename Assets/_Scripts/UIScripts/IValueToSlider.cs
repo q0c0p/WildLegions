@@ -3,8 +3,7 @@ using System.Collections;
 
 public interface IValueToSlider  {
 
-	float getValue(){
-	};
-	void setValue( SliderJoint2D
-};
+	float getValue ();
+	void setValue( float value) ;
+}
 
