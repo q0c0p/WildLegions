@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: cd4b1fb7e41aebd42adcdc32bf38869c
-timeCreated: 1435783816
+guid: b23c3e08d32c50b4aa1af19563a0cc06
+timeCreated: 1435786905
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - slider_: {fileID: 11415384, guid: a4a3215b6ef03d64abec8ba671a8bf1d, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
