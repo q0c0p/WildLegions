@@ -46,10 +46,11 @@ public class ExternalPerception : MonoBehaviour {
 			{
 				if(!GetComponentInParent<Memory>().isInMemory(action))
 				{
-					GetComponentInParent<Memory>().updateMemory(action);
+					GetComponentInParent<Memory>().updateAction(action);
 					if(action.isPerceived() != null)
 					{
 						affectiveState_.update(action.isPerceived());
+						GetComponentInParent<Memory>().updateAffectiveState(affectiveState_);
 					}
 				}
 			}

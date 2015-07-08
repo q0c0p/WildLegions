@@ -10,7 +10,6 @@ public class Hungriness : MonoBehaviour {
 	float behaviourPersistence_;
 	float hungrinessProgressRate_;
 	bool isLookingForFood;
-
 	public Slider slider_;
 
 	void Start () {
@@ -18,8 +17,7 @@ public class Hungriness : MonoBehaviour {
 		hungryTrigger_ = 30f;
 		fulfillment_ = 70f;
 		hungrinessProgressRate_ = 5f;
-		behaviourPersistence_ = 60f; //to multiply with deltaTime to get a minute, 
-		//also, this should be a dynamic value to adapt the amout of food available etc... to think
+		behaviourPersistence_ = 60f;
 		StartCoroutine(HungerCoroutine());
 	}
 
@@ -48,19 +46,11 @@ public class Hungriness : MonoBehaviour {
 		} 
 	}
 	void StartLookingForFood (float persistence) {
-		int timer =0;
 		GetComponent<AnimalController>().setAction(new LookFor(gameObject,"Food"));
 		print("I want to eat !!!");
-		/*
-		while ((timer * Time.deltaTime) < (persistence * Time.deltaTime) || globalHunger_>fulfillment_) {
-			// action lookfor (food)
-			timer +=1;
-		}
-
-		GetComponent<AnimalController>().setAction(new WalkAround(gameObject));
-		*/
 	}
 
 	void StopLookingForFood() {
+		GetComponent<AnimalController>().setAction(new WalkAround(gameObject));
 	}
 }

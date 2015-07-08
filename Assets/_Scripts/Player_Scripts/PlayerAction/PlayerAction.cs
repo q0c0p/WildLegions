@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public abstract class PlayerAction : IAgentAction {
@@ -29,27 +29,7 @@ public abstract class PlayerAction : IAgentAction {
 	}
 }
 
-public class PlayerAttack : PlayerAction
-{
-	public PlayerAttack()
-	{
-		setId ();
-	}
-	public override IPerception isPerceived()
-	{
-		return null;
-	}
-}
 
-public class PlayerFeed : PlayerAction
-{
-	public PlayerFeed()
-	{
-		setId ();
-	}
-	public override IPerception isPerceived()
-	{
-		return null;
-	}
-}
+
+
 

@@ -3,10 +3,12 @@ using System.Collections;
 
 public class AnimalController : MonoBehaviour {
 	private IAgentAction action_;
-	public string animalName = "mougou";
+	public string animalName_ = "mougou";
+	public AffectiveState affectiveState_;
 	// Use this for initialization
 	void Start () {
 		action_ = new WalkAround(gameObject);
+		affectiveState_ = new AffectiveState(0,0,0);
 	}
 
 	// Update is called once per frame
