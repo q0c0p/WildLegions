@@ -44,17 +44,12 @@ public class ExternalPerception : MonoBehaviour {
 			IAgentAction action = other.gameObject.GetComponent<PlayerController>().getAction();
 			if(action != null)
 			{
-				
-				if(GetComponentInParent<Memory>().isInMemory(action))
-				{
-
-				}
-				else
+				if(!GetComponentInParent<Memory>().isInMemory(action))
 				{
 					GetComponentInParent<Memory>().updateMemory(action);
 					if(action.isPerceived() != null)
 					{
-						affectiveState_.update(action);
+						affectiveState_.update(action.isPerceived());
 					}
 				}
 			}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AffectDerivation : MonoBehaviour {
+public class Tiredness : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

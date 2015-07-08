@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class Hungriness : MonoBehaviour, IPerception {
+public class Hungriness : MonoBehaviour {
 
 	public float globalHunger_ = 100f;		//values to rendomize eventually
 	float hungryTrigger_;

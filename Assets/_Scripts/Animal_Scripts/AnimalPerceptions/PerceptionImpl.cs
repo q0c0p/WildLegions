@@ -1,22 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AffectiveState : MonoBehaviour {
-	private float anger;
+public class PerceptionImpl : IPerception {
 	private float love;
 	private float fear;
-	public AffectiveState(float panger, float plove, float pfear)
+	private float anger;
+	public PerceptionImpl(float plove, float pfear,float panger)
 	{
 		love = plove;
 		fear = pfear;
 		anger = panger;
-	}
-
-	public void update(IPerception perception)
-	{
-		anger+=perception.getAnger ();
-		love+=perception.getLove ();
-		fear+=perception.getFear ();
 	}
 	public float getLove()
 	{
