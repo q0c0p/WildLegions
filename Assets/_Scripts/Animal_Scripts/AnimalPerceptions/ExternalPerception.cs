@@ -8,13 +8,11 @@ public class ExternalPerception : MonoBehaviour {
 	private SphereCollider collider_;
 	private GameObject interestGO_;
 	private string interestTag_;
-	private AffectiveState affectiveState_;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		animal_ = GetComponentInParent<AnimalController> ();
-		affectiveState_ = GetComponentInParent<AffectiveState> ();
 		collider_ = GetComponent<SphereCollider> ();
 		collider_.radius = radiusZone;
 		interestGO_ = null;
@@ -23,8 +21,13 @@ public class ExternalPerception : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-			animal_.setAction(new Follow(animal_.gameObject,other.gameObject));
+			animal_.getAffectiveState();
+			animal_.chooseAction(other.gameObject);
 		}
+
+
+		/*if we find the content interest*/
+
 		if (interestTag_ != null) {
 			if (other.tag == interestTag_)
 			{
@@ -44,15 +47,20 @@ public class ExternalPerception : MonoBehaviour {
 			IAgentAction action = other.gameObject.GetComponent<PlayerController>().getAction();
 			if(action != null)
 			{
-				if(!GetComponentInParent<Memory>().isInMemory(action))
+				/*
+				 *  If we trigger a new action
+				 */
+				if(!animal_.getMemory ().isInMemory(action))
 				{
-					GetComponentInParent<Memory>().updateAction(action);
+					animal_.getMemory ().updateAction(action);
 					if(action.isPerceived() != null)
 					{
-						affectiveState_.update(action.isPerceived());
-						GetComponentInParent<Memory>().updateAffectiveState(affectiveState_);
+						animal_.getAffectiveState().update(action.isPerceived());
+						animal_.getMemory ().updateAffectiveState(animal_.getAffectiveState());
 					}
+					animal_.chooseAction(other.gameObject);
 				}
+
 			}
 		}
 	}

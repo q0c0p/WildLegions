@@ -3,12 +3,15 @@ using System.Collections;
 
 public class Attack : AnimalAction
 {
-	public Attack (GameObject entity)
+	private GameObject other_;
+	public Attack (GameObject entity,GameObject other)
 	{
+		other_ = other;
 		entity_ = entity;
 	}
 	public override void playAction()
 	{
 		MonoBehaviour.print ("Attack!");
 	}
+
 }
