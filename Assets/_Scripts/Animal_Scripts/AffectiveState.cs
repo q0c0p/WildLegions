@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AffectiveState : MonoBehaviour {
+public class AffectiveState {
 	private float anger;
 	private float love;
 	private float fear;
@@ -64,4 +64,5 @@ public class AffectiveState : MonoBehaviour {
 	{
 		return anger;
 	}
+
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Memory : MonoBehaviour {
+public class Memory {
 	public int sizeMax = 20;
 	ArrayList actions_ = new ArrayList();
 	AffectiveState affectiveState_;
@@ -15,7 +15,7 @@ public class Memory : MonoBehaviour {
 			actions_.RemoveAt(0); // the first element to far in the memory to have an impact to the memory
 		}
 		foreach (IAgentAction action in actions_) {
-			print(action.getId());
+			MonoBehaviour.print(action.getId());
 		}
 	}
 	public void updateAffectiveState(AffectiveState affectiveState)
