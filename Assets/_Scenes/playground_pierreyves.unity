@@ -379,6 +379,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 144038, guid: 90ac1a1273a42ee4aa7d08d1f05affc0, type: 2}
+      propertyPath: m_TagString
+      value: Animal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90ac1a1273a42ee4aa7d08d1f05affc0, type: 2}
   m_IsPrefabParent: 0
