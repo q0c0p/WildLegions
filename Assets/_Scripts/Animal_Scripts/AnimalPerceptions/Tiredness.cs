@@ -15,7 +15,7 @@ public class Tiredness : MonoBehaviour {
 
 
 	void Update () {
-		slider_.value = globalEnergy_;
+		//slider_.value = globalEnergy_;
 	}
 
 	IEnumerator EnergyCoroutine () {

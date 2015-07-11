@@ -23,7 +23,7 @@ public class Hungriness : MonoBehaviour {
 
 	void Update() {
 
-		slider_.value = globalHunger_;
+		//slider_.value = globalHunger_;
 		//slider_.value = Mathf.MoveTowards (slider_.value, 100.0f, 0.15f);
 
 	}
