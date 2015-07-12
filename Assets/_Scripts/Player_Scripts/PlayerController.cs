@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 	Vector3 movement_;  
 	public float speed_ = 6f;
 	public float rotateSpeed_ = 50f ;
-	private PlayerAction action_;
+	private Action action_;
 	
 	public float smooth = 2.0F;
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 		player_ = GetComponent <GameObject> ();
 	}
 
-	public IAgentAction getAction()
+	public Action getAction()
 	{
 		return action_;
 	}

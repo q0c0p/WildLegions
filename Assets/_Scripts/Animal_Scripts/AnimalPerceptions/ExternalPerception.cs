@@ -21,8 +21,7 @@ public class ExternalPerception : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-			animal_.getAffectiveState();
-			animal_.chooseAction(other.gameObject);
+
 		}
 
 
@@ -44,24 +43,8 @@ public class ExternalPerception : MonoBehaviour {
 	void OnTriggerStay(Collider other)
 	{
 		if (other.tag == "Player") {
-			IAgentAction action = other.gameObject.GetComponent<PlayerController>().getAction();
-			if(action != null)
-			{
-				/*
-				 *  If we trigger a new action
-				 */
-				if(!animal_.getMemory ().isInMemory(action))
-				{
-					animal_.getMemory ().updateAction(action);
-					if(action.isPerceived() != null)
-					{
-						animal_.getAffectiveState().update(action.isPerceived());
-						animal_.getMemory ().updateAffectiveState(animal_.getAffectiveState());
-					}
-					animal_.chooseAction(other.gameObject);
-				}
+			Action action = other.gameObject.GetComponent<PlayerController>().getAction();
 
-			}
 		}
 	}
 	public void setInterestTag(string interest)

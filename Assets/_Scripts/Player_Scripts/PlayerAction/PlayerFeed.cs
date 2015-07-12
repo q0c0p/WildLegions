@@ -7,8 +7,4 @@ public class PlayerFeed : PlayerAction
 	{
 		setId ();
 	}
-	public override IPerception isPerceived()
-	{
-		return new PerceptionImpl(6,-5,-5);
-	}
 }

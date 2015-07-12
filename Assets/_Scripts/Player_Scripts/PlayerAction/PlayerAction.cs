@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class PlayerAction : IAgentAction {
+public abstract class PlayerAction : Action {
 	static long autoIncId;
 	private long id_;
 	public void setId()
@@ -15,11 +15,7 @@ public abstract class PlayerAction : IAgentAction {
 	public void stopAction()
 	{
 	}
-	public virtual IPerception isPerceived()
-	{
-		return null;
-	}
-	public IMovement getMovement()
+	public FatimaEvent getEvent()
 	{
 		return null;
 	}

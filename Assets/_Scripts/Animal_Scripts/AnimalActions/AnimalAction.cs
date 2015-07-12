@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class AnimalAction : IAgentAction
+public abstract class AnimalAction : Action
 {
 	
 	protected GameObject entity_;
-	protected IMovement movement_;
 	static long autoIncId;
 	private long id_;
 	public void setId()
@@ -13,30 +12,18 @@ public abstract class AnimalAction : IAgentAction
 		autoIncId++;
 		id_ = autoIncId;
 	}
-
-	public virtual void playAction()
-	{
-		/*
-		if (movement_ != null) {
-			if (!movement_.isFinished ())
-				movement_.move ();
-			else
-				movement_ = null;
-		}
-		*/
-	}
-
-	public virtual IPerception isPerceived()
+	public FatimaEvent getEvent()
 	{
 		return null;
 	}
+
+	public virtual void playAction()
+	{
+	}
+
 	public virtual void stopAction()
 	{
 		
-	}
-	public IMovement getMovement()
-	{
-		return movement_;
 	}
 	public long getId()
 	{
