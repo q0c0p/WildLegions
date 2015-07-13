@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
 namespace Fatima
 {
 	public interface FatimaCore {
