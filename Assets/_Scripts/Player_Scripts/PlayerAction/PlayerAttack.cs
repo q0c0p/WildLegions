@@ -6,10 +6,6 @@ public class PlayerAttack : PlayerAction
 	{
 		setId ();
 	}
-	public override IPerception isPerceived()
-	{
-		return new PerceptionImpl(-3,4,5);
-	}
 }
 
 

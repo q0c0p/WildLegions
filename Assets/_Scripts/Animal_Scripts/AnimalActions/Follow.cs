@@ -20,12 +20,8 @@ public class Follow : AnimalAction
 			target_ = other_.transform.position;
 			startAction ();
 		}
-		if( !movement_.isFinished())
-			movement_.move ();
 	}
 	public void startAction()
 	{
-		movement_ = new LinearMovement (entity_,target_);
-		movement_.setEpsilon (5f);
 	}
 }

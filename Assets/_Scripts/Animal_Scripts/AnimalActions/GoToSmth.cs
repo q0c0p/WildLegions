@@ -11,7 +11,6 @@ public class GoToSmth : AnimalAction {
 		entity_ = entity;
 		other_ = other;
 		current_ = new Follow (entity,other);
-		current_.getMovement ().setEpsilon (0.05f);
 	}
 	public override void playAction ()
 	{
