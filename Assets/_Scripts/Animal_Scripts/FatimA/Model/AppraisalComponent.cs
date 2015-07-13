@@ -11,7 +11,8 @@ namespace Fatima
 		 * */
 		void startAppraisal(FatimaEvent evenement, AppraisalFrame aF);
 		/**
-		 * 
+		 * continuous appraisal will update an event which is stored in memory
+		 * the Agent remember but will forget after a long period of time
 		 * */
 		AppraisalFrame continuousAppraisal();
 	}
