@@ -10,5 +10,9 @@ namespace Fatima
 	 	*This method updates the designated component. 
 	 	* */
 		void update();
+		/**
+	 	*This method updates the designated component and takes an event as argument. 
+	 	* */
+		void update(FatimaEvent pevent);
 	}
 }
