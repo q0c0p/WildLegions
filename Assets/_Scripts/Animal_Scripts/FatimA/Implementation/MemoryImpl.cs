@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Fatima;
 
 public class MemoryImpl : Fatima.Memory {
 	public int sizeMax = 20;
-	ArrayList events_ = new ArrayList();
+	List<FatimaEvent> events_ = new List<FatimaEvent>(); 
 	AffectiveState affectiveState_;
 	// Use this for initialization
 
