@@ -6,7 +6,9 @@ namespace Fatima
 	 * Each component must be updated as an event is perceived by the agent.
 	 * */
 	public interface Component {
-
+		/**
+	 	*This method updates the designated component. 
+	 	* */
 		void update();
 	}
 }
