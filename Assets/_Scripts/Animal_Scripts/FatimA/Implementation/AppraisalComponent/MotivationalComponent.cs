@@ -13,22 +13,21 @@ public class MotivationalComponent : AppraisalComponent {
 
 	MotivationalComponent()
 	{
-		desirability_ = 0;
 	}
-	void update()
+	public void update()
 	{
-		;
+
 	}
-	void update(FatimaEvent pevent)
+	public void update(FatimaEvent pevent)
 	{
-		;
+
 	}
-	void startAppraisal(FatimaEvent evenement, AppraisalFrame aF)
+	public void startAppraisal(FatimaEvent evenement, AppraisalFrame aF)
 	{
-		;
+
 	}
-	AppraisalFrame continuousAppraisal()
+	public AppraisalFrame continuousAppraisal()
 	{
-		;
+		return null;
 	}
 }
