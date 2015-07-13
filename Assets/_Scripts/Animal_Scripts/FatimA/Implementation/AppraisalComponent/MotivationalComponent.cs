@@ -4,14 +4,31 @@ using Fatima;
 
 /**
  * This component models the basic agent's drives (=needs) such as energy, health... 
- * When updated by an event, it evaluates its desirability (appraisal varible) and sends it to the current appraisal frame. 
+ * When updated by an event, it evaluates its desirability (does it increases or decreases a need) (appraisal variable) 
+ * and sends it to the current appraisal frame. 
  * */
 public class MotivationalComponent : AppraisalComponent {
 
 	private AppraisalVariable desirability_;
 
-	void update();
-	void update(FatimaEvent pevent);
-	void startAppraisal(FatimaEvent evenement, AppraisalFrame aF);
-	AppraisalFrame continuousAppraisal();
+	MotivationalComponent()
+	{
+		desirability_ = 0;
+	}
+	void update()
+	{
+		;
+	}
+	void update(FatimaEvent pevent)
+	{
+		;
+	}
+	void startAppraisal(FatimaEvent evenement, AppraisalFrame aF)
+	{
+		;
+	}
+	AppraisalFrame continuousAppraisal()
+	{
+		;
+	}
 }
