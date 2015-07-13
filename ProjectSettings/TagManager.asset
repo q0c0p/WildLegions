@@ -8,6 +8,7 @@ TagManager:
   - Terrain
   - Food
   - Animal
+  - AnimalCanvas
   layers:
   - Default
   - TransparentFX

@@ -57,4 +57,6 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate(Vector3.forward* -speed_ * Time.deltaTime);
 		}
 	}
+
+
 }

@@ -8,11 +8,13 @@ public class AnimalController : MonoBehaviour {
 	public Memory memory_;
 
 
+
 	// Use this for initialization
 	void Start () {
 		action_ = new WalkAround(gameObject);
 		affectiveState_ = new AffectiveState(0,0,0);
 		memory_ = new Memory ();
+	
 	}
 
 	// Update is called once per frame
@@ -63,5 +65,13 @@ public class AnimalController : MonoBehaviour {
 
 	}
 
+	void OnClick(){
 
+	}
+	/*void OnTriggerStay(GameObject other){
+		if (other.tag == "Player") {
+			canvasDisplay_.setState(true);
+		}
+	}
+*/
 }
