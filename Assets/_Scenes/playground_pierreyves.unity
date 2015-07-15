@@ -705,11 +705,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22409998, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22409998, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22419806, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1567,6 +1567,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &1406132792
 Transform:
   m_ObjectHideFlags: 0

@@ -1,12 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Fatima;
 
-public class Desirability : AppraisalVariable {
-
-	private float value_;
-
-	float getValue(){
-		return value_;
+public class Desirability : AppraisalVariableAbstract {
+	public Desirability(float pvalue)
+	{
+		setValue (pvalue);
 	}
 }

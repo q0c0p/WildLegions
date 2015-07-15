@@ -6,12 +6,8 @@
 public interface FatimaEvent 
 {
 	/**
-	 * This method returns the Action that occurs in the agent's perception zone.
-	 * */
-	Action getAction();
-	/**
 	 * This method returns the ID of the Action that occurs in the agent's perception zone.
 	 * */
-	int getId();
+	long getId();
 }
 
