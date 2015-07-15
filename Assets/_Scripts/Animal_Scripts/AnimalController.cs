@@ -12,7 +12,7 @@ public class AnimalController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		artificialIntelligence_ = new FatimaCoreImpl ();
+		artificialIntelligence_ = new FatimaCoreImpl (gameObject);
 		action_ = new WalkAround(gameObject);
 	}
 
