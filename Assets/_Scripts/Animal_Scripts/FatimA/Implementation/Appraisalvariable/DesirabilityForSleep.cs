@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DesirabilityForSleep : MonoBehaviour {
+public class DesirabilityForSleep : AppraisalVariableAbstract {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public DesirabilityForSleep(float pvalue)
+	{
+		setValue(pvalue);
 	}
 }

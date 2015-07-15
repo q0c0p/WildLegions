@@ -69,7 +69,7 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	}
 
 	/**
-	 * The method which update emotion describe
+	 * The method which update emotion describe in the paper
 	 * */
 
 	protected void updateEmotion(Fatima.AppraisalFrame aF)

@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DesirabilityForFood : MonoBehaviour {
+/**
+ * This appraisal variable show the desirability for food
+ * it is usually create by a hungryness event
+ * */
+public class DesirabilityForFood : AppraisalVariableAbstract {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public DesirabilityForFood(float pvalue)
+	{
+		setValue (pvalue);
 	}
 }

@@ -40,6 +40,7 @@ public class Hungriness : MonoBehaviour {
 	
 	void DecreaseHungerState(float rate){
 		globalHunger_ -= rate;
+		GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
 		if (globalHunger_ < hungryTrigger_ && !isLookingForFood ) {
 			print("I want to eat !!!");
 			StartLookingForFood(behaviourPersistence_);

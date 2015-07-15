@@ -12,14 +12,14 @@ using Fatima;
 public class MotivationalComponent : AppraisalComponent {
 
 	private AppraisalVariable desirability_;
-	private List<AppraisalFrame> appraisalFrame_ = new List<AppraisalFrame>();
+	private Fatima.AppraisalFrame appraisalFrame_;
 	
 	public MotivationalComponent()
 	{
 	}
 	/**
 	 * not yet implemented 
-	 * this should 
+	 * this should update 
 	 * */
 	public void update()
 	{
@@ -31,24 +31,18 @@ public class MotivationalComponent : AppraisalComponent {
 	 * here we gonna start the appraisal of an event and store the appraisal variables into a appraisal frame
 	 * for this component we gonna make appraisal frame that treats the specials needs
 	 * */
-	public void startAppraisal(FatimaEvent evenement, AppraisalFrame aF)
+	public void startAppraisal(FatimaEvent pevent, AppraisalFrame aF)
 	{
-		eventNeedManager (evenement);
+		if (pevent is HungerEvent) {
+			appraisalFrame_ = aF;
+			appraisalFrame_.add (new DesirabilityForFood (4));
+		} else if (pevent is TiredEvent) {
+			appraisalFrame_ = aF;
+			appraisalFrame_.add (new DesirabilityForSleep (4));
+		} 
 	}
 	public AppraisalFrame continuousAppraisal()
 	{
-		return null;
-	}
-
-
-	/**
-	 * This function deals with the caracteristic of an event 
-	 * */
-	private void eventNeedManager(FatimaEvent pevent)
-	{
-		if(pevent is HungerEvent)
-			MonoBehaviour.print ("coucou je suis un event hunger");
-		else if(pevent is TiredEvent)
-			MonoBehaviour.print ("coucou je suis un event Tired");
-	}
+		return appraisalFrame_;
+	}	
 }
