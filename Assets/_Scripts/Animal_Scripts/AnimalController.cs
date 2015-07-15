@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AnimalController : MonoBehaviour {
 	private Action action_;
-	private Fatima.FatimaCore IA;
+	private Fatima.FatimaCore artificialIntelligence_;
 	public string animalName_ = "mougou";
 
 
@@ -12,6 +12,7 @@ public class AnimalController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		artificialIntelligence_ = new FatimaCoreImpl ();
 		action_ = new WalkAround(gameObject);
 	}
 
@@ -34,5 +35,10 @@ public class AnimalController : MonoBehaviour {
 	public Action getAction()
 	{
 		return action_;
+	}
+
+	public Fatima.FatimaCore getArtificialIntelligence()
+	{
+		return artificialIntelligence_;
 	}
 }
