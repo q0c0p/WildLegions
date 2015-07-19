@@ -1,15 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Love : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+public class Love : EmotionAbstract {
+	public Love(float intensity, float valence, Fatima.AppraisalFrame appraisalFrame) : 
+		base(intensity, valence, appraisalFrame)
+	{
 	}
 }

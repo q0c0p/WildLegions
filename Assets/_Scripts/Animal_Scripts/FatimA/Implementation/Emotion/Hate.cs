@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Hate : EmotionAbstract {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public Hate(float intensity, float valence, Fatima.AppraisalFrame appraisalFrame) : 
+		base(intensity, valence, appraisalFrame)
+	{
 	}
 }

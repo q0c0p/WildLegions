@@ -33,7 +33,7 @@ public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 	 * */
 	public void add(Fatima.AppraisalVariable aV)
 	{
-	hasChanged_ = true;
+		hasChanged_ = true;
 		frameContent_.Add (aV);
 	}
 }

@@ -2,14 +2,8 @@
 using System.Collections;
 
 public class Interest : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public Interest(float intensity, float valence, Fatima.AppraisalFrame appraisalFrame) : 
+		base(intensity, valence, appraisalFrame)
+	{
 	}
 }

@@ -16,5 +16,10 @@ namespace Fatima
 	 	*Returns the emotion's valence. 
 	 	* */
 		float getValence();
+
+		/**
+		 * Returns the appraisalFrame that generate this emotion
+		 * */
+		Fatima.AppraisalFrame getAppraisalFrame();
 	}
 }

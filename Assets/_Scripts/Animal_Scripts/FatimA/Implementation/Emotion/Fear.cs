@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fear : MonoBehaviour {
+public class Fear : EmotionAbstract {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public Fear(float intensity, float valence, Fatima.AppraisalFrame appraisalFrame) : 
+		base(intensity, valence, appraisalFrame)
+	{
 	}
 }

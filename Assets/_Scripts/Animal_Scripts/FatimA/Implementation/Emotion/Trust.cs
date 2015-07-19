@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Trust : MonoBehaviour {
+public class Trust : EmotionAbstract {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public Trust(float intensity, float valence, Fatima.AppraisalFrame appraisalFrame) : 
+		base(intensity, valence, appraisalFrame)
+	{
 	}
 }

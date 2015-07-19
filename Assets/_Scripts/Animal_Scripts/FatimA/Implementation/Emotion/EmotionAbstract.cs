@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EmotionAstract : MonoBehaviour {
+public class EmotionAbstract : MonoBehaviour {
+	private float intensity_;
+	private float valence_;
+	private Fatima.AppraisalFrame appraisalFrame_;
 
-	// Use this for initialization
-	void Start () {
-	
+	public EmotionAbstract(float pintensity, float pvalence, Fatima.AppraisalFrame pappraisalFrame)
+	{
+		intensity_ = pintensity;
+		valence_ = pvalence;
+		appraisalFrame_ = pappraisalFrame;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	float getIntensity()
+	{
+		return intensity_;
+	}
+	float getValence()
+	{
+		return valence_;
+	}
+	Fatima.AppraisalFrame getAppraisalFrame()
+	{
+		return appraisalFrame_;
 	}
 }
