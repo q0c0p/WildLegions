@@ -13,9 +13,9 @@ public class FatimaCoreImpl : FatimaCoreAbstract {
 		MonoBehaviour.print ("it is time to choose an action");
 		return new WalkAround (entity_);
 	}
-	protected override Fatima.AppraisalFrame newAppraisalFrame()
+	protected override Fatima.AppraisalFrame newAppraisalFrame(FatimaEvent pevent)
 	{
-		return new AppraisalFrameImpl();
+		return new AppraisalFrameImpl(pevent);
 	}
 
 }

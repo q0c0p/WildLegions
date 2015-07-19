@@ -48,7 +48,7 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 			{
 				memory_.update(pevent);
 				updateComponents(pevent);
-				Fatima.AppraisalFrame aF = newAppraisalFrame();
+				Fatima.AppraisalFrame aF = newAppraisalFrame(pevent);
 
 				foreach(Fatima.AppraisalComponent aC in appraisalComponents_)
 				{
@@ -95,7 +95,7 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	 * The method which create a new appraisal frame
 	 * you must override it when you implement FAtiMA
 	 * */
-	protected abstract Fatima.AppraisalFrame newAppraisalFrame ();
+	protected abstract Fatima.AppraisalFrame newAppraisalFrame (FatimaEvent pevent);
 
 
 	/* update components */

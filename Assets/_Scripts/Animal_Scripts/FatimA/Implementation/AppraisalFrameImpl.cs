@@ -11,8 +11,10 @@ using System.Collections.Generic;
 public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 	List<Fatima.AppraisalVariable> frameContent_ = new List<Fatima.AppraisalVariable>();
 	private bool hasChanged_ = false;
-	public AppraisalFrameImpl()
+	private FatimaEvent event_;
+	public AppraisalFrameImpl(FatimaEvent pevent)
 	{
+		event_ = pevent;
 	}
 	/**
 	 * this function return the boolean hasChanged and set it to false;
