@@ -17,5 +17,4 @@ public class FatimaCoreImpl : FatimaCoreAbstract {
 	{
 		return new AppraisalFrameImpl(pevent);
 	}
-
 }

@@ -7,4 +7,5 @@ public class Trust : EmotionAbstract {
 		base(intensity, valence, appraisalFrame)
 	{
 	}
+	
 }

@@ -12,10 +12,12 @@ public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 	List<Fatima.AppraisalVariable> frameContent_ = new List<Fatima.AppraisalVariable>();
 	private bool hasChanged_ = false;
 	private FatimaEvent event_;
+
 	public AppraisalFrameImpl(FatimaEvent pevent)
 	{
 		event_ = pevent;
 	}
+
 	/**
 	 * this function return the boolean hasChanged and set it to false;
 	 * */
@@ -28,6 +30,7 @@ public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 			return true;
 		}
 	}
+
 	/**
 	 * when you add components you also need to update the hasChanged boolean
 	 * */
