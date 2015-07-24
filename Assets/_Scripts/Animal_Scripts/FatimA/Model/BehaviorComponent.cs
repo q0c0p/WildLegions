@@ -13,5 +13,16 @@ namespace Fatima
 		 * one BehaviorComponent
 		 */
 		void actionSelection();
+
+		/**
+		 * After you choose an action you may want to access the action against who and so on 
+		 * */
+		Action getAction();
+
+		/**
+		 * You may also need the value according to the action 
+		 * */
+
+		float getValue();
 	}
 }
