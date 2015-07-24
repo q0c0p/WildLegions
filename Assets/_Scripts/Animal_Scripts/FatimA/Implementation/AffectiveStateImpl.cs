@@ -7,6 +7,11 @@ public class AffectiveStateImpl : Fatima.AffectiveState {
 	public AffectiveStateImpl()
 	{
 	}
+	/**
+	 * In this basic implementation you add an emotion if this emotion doesn't exist 
+	 * If she exist you replace it 
+	 * This implementation should evolve 
+	 * */
 	public void addEmotion(Fatima.Emotion pemotion)	
 	{
 		Fatima.Emotion emotionInList = null;
@@ -16,5 +21,12 @@ public class AffectiveStateImpl : Fatima.AffectiveState {
 		if (emotionInList != null)
 			emotionalSet.Remove (emotionInList);
 		emotionalSet.Add(pemotion);
+	}
+	/**
+	 * You may also need to get the emotions that compose actually the affective state
+	 * */
+	public List<Fatima.Emotion> getEmotionalSet()
+	{
+		return emotionalSet;
 	}
 }

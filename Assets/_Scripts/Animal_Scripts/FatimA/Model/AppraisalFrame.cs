@@ -24,5 +24,10 @@ namespace Fatima
 	 	* */
 		List<Fatima.AppraisalVariable> getFrameContent();
 
+		/**
+		 * You may also need the event that occurs this appraisal frame
+		 * */
+		FatimaEvent getEvent();
+
 	}
 }

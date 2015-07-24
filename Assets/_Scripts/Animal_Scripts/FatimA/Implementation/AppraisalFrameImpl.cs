@@ -47,4 +47,12 @@ public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 	{
 		return frameContent_;
 	}
+
+	/**
+	 * You may also need the event that occurs this appraisal frame
+	 * */
+	public FatimaEvent getEvent()
+	{
+		return event_;
+	}
 }

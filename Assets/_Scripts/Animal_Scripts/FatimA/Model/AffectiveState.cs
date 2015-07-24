@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections.Generic;
+
+
 namespace Fatima
 {
 	/**
@@ -10,6 +12,12 @@ namespace Fatima
 		 * This function add an emotion to the affective state 
 		 * The Emotion is add or update
 		 */
-		void addEmotion(Emotion pemotion);
+		void addEmotion(Emotion pemotion); 
+
+		/**
+		 * You may also need to get the emotions that compose actually the affective state
+		 * */
+		List<Fatima.Emotion> getEmotionalSet();
+
 	}
 }
