@@ -6,7 +6,6 @@ public class Hungriness : MonoBehaviour {
 
 	public float globalHunger_ = 100f;		//values to rendomize eventually
 	float hungryTrigger_;
-	float fulfillment_;
 	float behaviourPersistence_;
 	float hungrinessProgressRate_;
 	bool isLookingForFood;
@@ -15,7 +14,6 @@ public class Hungriness : MonoBehaviour {
 	void Start () {
 		isLookingForFood = false;
 		hungryTrigger_ = 30f;
-		fulfillment_ = 70f;
 		hungrinessProgressRate_ = 5f;
 		behaviourPersistence_ = 60f;
 		StartCoroutine(HungerCoroutine());
@@ -48,7 +46,7 @@ public class Hungriness : MonoBehaviour {
 		} 
 	}
 	void StartLookingForFood (float persistence) {
-		GetComponent<AnimalController>().setAction(new LookFor(gameObject,"Food"));
+		GetComponent<AnimalController>().setAction(new LookFor(gameObject));
 		print("I want to eat !!!");
 	}
 

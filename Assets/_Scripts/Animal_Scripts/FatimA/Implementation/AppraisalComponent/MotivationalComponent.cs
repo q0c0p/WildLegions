@@ -33,13 +33,10 @@ public class MotivationalComponent : AppraisalComponent {
 	 * */
 	public void startAppraisal(FatimaEvent pevent, AppraisalFrame aF)
 	{
-		if (pevent is HungerEvent) {
+		if (pevent is HungerEvent || pevent is TiredEvent) {
 			appraisalFrame_ = aF;
-			appraisalFrame_.add (new DesirabilityForFood (4));
-		} else if (pevent is TiredEvent) {
-			appraisalFrame_ = aF;
-			appraisalFrame_.add (new DesirabilityForSleep (4));
-		} 
+			appraisalFrame_.add (new Desirability (4));
+		}
 	}
 	public AppraisalFrame continuousAppraisal()
 	{

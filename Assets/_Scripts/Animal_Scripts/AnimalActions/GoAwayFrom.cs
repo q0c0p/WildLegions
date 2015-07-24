@@ -4,6 +4,7 @@ using System.Collections;
 public class GoAwayFrom : AnimalAction
 {
 	private GameObject other_;
+	private NavMeshAgent nav_;
 	float distance_;
 	
 	public GoAwayFrom(GameObject entity, GameObject other , float distance)
@@ -11,6 +12,7 @@ public class GoAwayFrom : AnimalAction
 		entity_ = entity;
 		other_ = other;
 		distance_ = distance;
+		nav_ = entity_.GetComponent<NavMeshAgent> ();
 		startAction ();
 	}
 	public GoAwayFrom(GameObject entity,GameObject other)
@@ -18,6 +20,7 @@ public class GoAwayFrom : AnimalAction
 		entity_ = entity;
 		other_ = other;
 		distance_ = 10f;
+		nav_ = entity_.GetComponent<NavMeshAgent> ();
 		startAction ();
 	}
 	private void startAction()
@@ -25,6 +28,6 @@ public class GoAwayFrom : AnimalAction
 		/* A movement to the opposite of the other game object */
 		Vector3 direction = entity_.transform.position - other_.transform.position;
 		direction = direction.normalized * distance_;
-
+		nav_.SetDestination(direction);
 	}
 }
