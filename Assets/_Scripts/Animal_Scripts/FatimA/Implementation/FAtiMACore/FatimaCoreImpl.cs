@@ -8,6 +8,7 @@ public class FatimaCoreImpl : FatimaCoreAbstract {
 		entity_ = entity;
 		addAppraisalComponent (new MotivationalComponent());
 		addAffectDerivationComponent (new AffectDerivationComponentImpl());
+		setAffectiveState (new AffectiveStateImpl());
 	}
 	protected override Action actionSelection ()
 	{

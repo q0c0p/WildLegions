@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -14,8 +14,7 @@ public class ReactiveComponent : Fatima.AppraisalComponent {
 	{
 	}
 	public void update()
-	{
-		
+	{	
 	}
 	public void update(FatimaEvent pevent)
 	{
@@ -25,7 +24,8 @@ public class ReactiveComponent : Fatima.AppraisalComponent {
 	{
 		if (pevent is ThreatEvent) {
 			appraisalFrame_ = aF;
-			appraisalFrame_.add (new Desirability (4));
+			appraisalFrame_.add (new Desirability (-8));
+			appraisalFrame_.add (new Like(-5));
 		}
 	}
 	public Fatima.AppraisalFrame continuousAppraisal()

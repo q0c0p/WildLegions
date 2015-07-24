@@ -7,4 +7,10 @@ public class Fear : EmotionAbstract {
 		base(intensity, valence, appraisalFrame)
 	{
 	}
+	public override bool isDifferent(Fatima.Emotion pemotion)
+	{
+		if(pemotion is Fear)
+			return false;
+		return true;
+	}
 }

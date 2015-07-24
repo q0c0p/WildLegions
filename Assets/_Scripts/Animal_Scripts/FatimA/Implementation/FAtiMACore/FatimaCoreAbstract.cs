@@ -34,6 +34,10 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	{
 		behaviorComponents_.Add (bC);
 	}
+	protected void setAffectiveState(Fatima.AffectiveState afState)
+	{
+		affectiveState_ = afState;
+	}
 
 
 	/**

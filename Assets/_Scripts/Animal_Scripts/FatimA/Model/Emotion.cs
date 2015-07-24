@@ -21,5 +21,11 @@ namespace Fatima
 		 * Returns the appraisalFrame that generate this emotion
 		 * */
 		Fatima.AppraisalFrame getAppraisalFrame();
+
+		/**
+		 * Verify if an Emotion is different of another one
+		 * */
+
+		bool isDifferent(Fatima.Emotion pemotion);
 	}
 }

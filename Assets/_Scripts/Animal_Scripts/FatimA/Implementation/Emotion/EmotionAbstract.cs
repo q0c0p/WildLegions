@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EmotionAbstract : Fatima.Emotion {
+public abstract class EmotionAbstract : Fatima.Emotion {
 	private float intensity_;
 	private float valence_;
 	private Fatima.AppraisalFrame appraisalFrame_;
@@ -25,4 +25,5 @@ public class EmotionAbstract : Fatima.Emotion {
 	{
 		return appraisalFrame_;
 	}
+	public abstract bool isDifferent(Fatima.Emotion pemotion);
 }

@@ -6,4 +6,10 @@ public class Love : EmotionAbstract {
 		base(intensity, valence, appraisalFrame)
 	{
 	}
+	public override bool isDifferent(Fatima.Emotion pemotion)
+	{
+		if(pemotion is Love)
+			return false;
+		return true;
+	}
 }
