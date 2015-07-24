@@ -8,6 +8,8 @@ using System.Collections;
  * */
 public class ReactiveComponent : Fatima.AppraisalComponent {
 
+	private Fatima.AppraisalFrame appraisalFrame_;
+
 	public ReactiveComponent()
 	{
 	}
@@ -19,9 +21,12 @@ public class ReactiveComponent : Fatima.AppraisalComponent {
 	{
 		
 	}
-	public void startAppraisal(FatimaEvent evenement, Fatima.AppraisalFrame aF)
+	public void startAppraisal(FatimaEvent pevent, Fatima.AppraisalFrame aF)
 	{
-		
+		if (pevent is ThreatEvent) {
+			appraisalFrame_ = aF;
+			appraisalFrame_.add (new Desirability (4));
+		}
 	}
 	public Fatima.AppraisalFrame continuousAppraisal()
 	{

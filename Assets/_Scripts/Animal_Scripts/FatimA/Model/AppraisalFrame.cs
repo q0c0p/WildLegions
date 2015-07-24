@@ -1,4 +1,6 @@
-﻿
+﻿using System.Collections.Generic;
+
+
 namespace Fatima
 {
 	/**
@@ -16,6 +18,11 @@ namespace Fatima
 		 * This function is needed to update the state of the appraisialFrame.
 		 * */
 		void add(Fatima.AppraisalVariable aV);
+
+		/**
+	 	* You also need to get the list of appraisal variables
+	 	* */
+		List<Fatima.AppraisalVariable> getFrameContent();
 
 	}
 }

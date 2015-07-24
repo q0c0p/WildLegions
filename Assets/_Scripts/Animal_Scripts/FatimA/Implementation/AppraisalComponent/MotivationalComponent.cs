@@ -11,7 +11,6 @@ using Fatima;
 
 public class MotivationalComponent : AppraisalComponent {
 
-	private AppraisalVariable desirability_;
 	private Fatima.AppraisalFrame appraisalFrame_;
 	
 	public MotivationalComponent()
@@ -19,7 +18,7 @@ public class MotivationalComponent : AppraisalComponent {
 	}
 	/**
 	 * not yet implemented 
-	 * this should update 
+	 * this should update the hungriness
 	 * */
 	public void update()
 	{
@@ -38,6 +37,7 @@ public class MotivationalComponent : AppraisalComponent {
 			appraisalFrame_.add (new Desirability (4));
 		}
 	}
+
 	public AppraisalFrame continuousAppraisal()
 	{
 		return appraisalFrame_;

@@ -39,4 +39,12 @@ public class AppraisalFrameImpl : Fatima.AppraisalFrame {
 		hasChanged_ = true;
 		frameContent_.Add (aV);
 	}
+
+	/**
+	 * You also need to get the list of appraisal variables
+	 * */
+	public List<Fatima.AppraisalVariable> getFrameContent()
+	{
+		return frameContent_;
+	}
 }

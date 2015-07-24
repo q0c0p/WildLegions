@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EmotionAbstract : MonoBehaviour {
+public class EmotionAbstract : Fatima.Emotion {
 	private float intensity_;
 	private float valence_;
 	private Fatima.AppraisalFrame appraisalFrame_;
@@ -13,15 +13,15 @@ public class EmotionAbstract : MonoBehaviour {
 		appraisalFrame_ = pappraisalFrame;
 	}
 
-	float getIntensity()
+	public float getIntensity()
 	{
 		return intensity_;
 	}
-	float getValence()
+	public float getValence()
 	{
 		return valence_;
 	}
-	Fatima.AppraisalFrame getAppraisalFrame()
+	public Fatima.AppraisalFrame getAppraisalFrame()
 	{
 		return appraisalFrame_;
 	}

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+
 
 
 /**
@@ -10,6 +12,7 @@ using System.Collections;
 
 
 public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
+
 	/**
 	 * This module is a basic implementation so there is no update to make 
 	 */
@@ -35,6 +38,20 @@ public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
 	 * */
 	public Fatima.Emotion affectDerivation(Fatima.AppraisalFrame aF)
 	{
+
+		Fatima.AppraisalVariable currentAV = null;
+		float maxValue=0;
+		foreach (Fatima.AppraisalVariable av in aF.getFrameContent()) 
+			if(Math.Abs(av.getValue()) >= maxValue)
+			{
+				maxValue = Math.Abs(av.getValue());
+				currentAV = av;
+			}
+		
+		if (currentAV is Desirability) {
+			MonoBehaviour.print ("I want something");
+			return new Interest(currentAV.getValue(), currentAV.getValue(),aF);
+		}
 		return null;
 	}
 }
