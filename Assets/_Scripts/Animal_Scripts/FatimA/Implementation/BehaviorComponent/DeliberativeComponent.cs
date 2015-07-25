@@ -24,12 +24,21 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 		float value = 0;
 		Fatima.Emotion tmpEmotion = null;
 		foreach(Fatima.Emotion emotion in affectiveState_.getEmotionalSet())
-			if(emotion.getIntensity() >= value)
+			if(Math.Abs(emotion.getIntensity()) >= value)
 			{
 				tmpEmotion = emotion;
-				value = emotion.getIntensity();
+				value = Math.Abs(emotion.getIntensity());
 			}
-
+		if (tmpEmotion is Fear) {
+		}
+		else if (tmpEmotion is Hate) {
+		}
+		else if (tmpEmotion is Interest) {
+		}
+		else if (tmpEmotion is Love) {
+		}
+		else if (tmpEmotion is Trust) {
+		}
 	}
 }
 

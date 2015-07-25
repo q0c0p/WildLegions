@@ -697,19 +697,19 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22466688, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22466688, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22409998, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22409998, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22419806, guid: 09669de2df8f0434491ef008b9d3ac65, type: 2}
       propertyPath: m_LocalPosition.x
