@@ -26,6 +26,7 @@ public class GoAwayFrom : AnimalAction
 	private void startAction()
 	{
 		/* A movement to the opposite of the other game object */
+		MonoBehaviour.print ("You scaring me");
 		Vector3 direction = entity_.transform.position - other_.transform.position;
 		direction = direction.normalized * distance_;
 		nav_.SetDestination(direction);

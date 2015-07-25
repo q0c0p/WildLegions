@@ -8,7 +8,7 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	protected List<Fatima.BehaviorComponent> behaviorComponents_ = new List<Fatima.BehaviorComponent>();
 	protected List<Fatima.AffectDerivationComponent> affectDerivationComponents_ = new List<Fatima.AffectDerivationComponent>(); 
 	protected Fatima.AffectiveState affectiveState_ ;
-	protected Fatima.Memory memory_ = new MemoryImpl();
+	protected Fatima.Memory memory_;
 
 	public void update()
 	{
@@ -22,6 +22,11 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	{
 		return action_;
 	}
+
+	/*
+	 * Those functions add the components 
+	 * */
+
 	protected void addAppraisalComponent(Fatima.AppraisalComponent aC)
 	{
 		appraisalComponents_.Add (aC);
@@ -34,9 +39,41 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 	{
 		behaviorComponents_.Add (bC);
 	}
+
+	/*
+	 * Those functions get the components 
+	 * */
+
+	protected List<Fatima.AppraisalComponent> getAppraisalComponent()
+	{
+		return appraisalComponents_;
+	}
+	protected List<Fatima.AffectDerivationComponent> getAffectDerivationComponent()
+	{
+		return affectDerivationComponents_;
+	}
+	protected List<Fatima.BehaviorComponent> getBehaviorComponent()
+	{
+		return behaviorComponents_;
+	}
+
+
 	protected void setAffectiveState(Fatima.AffectiveState afState)
 	{
 		affectiveState_ = afState;
+	}
+	protected Fatima.AffectiveState getAffectiveState()
+	{
+		return affectiveState_;
+	}
+
+	protected void setMemory(Fatima.Memory pmemory)
+	{
+		memory_ = pmemory;
+	}
+	protected Fatima.Memory getMemory()
+	{
+		return memory_;
 	}
 
 

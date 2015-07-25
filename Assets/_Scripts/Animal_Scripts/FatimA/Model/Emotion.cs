@@ -24,6 +24,7 @@ namespace Fatima
 
 		/**
 		 * Verify if an Emotion is different of another one
+		 * if the Emotion belongs to the same class than pemotion then it returns false 
 		 * */
 
 		bool isDifferent(Fatima.Emotion pemotion);

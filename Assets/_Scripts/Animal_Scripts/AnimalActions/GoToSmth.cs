@@ -11,6 +11,7 @@ public class GoToSmth : AnimalAction {
 		entity_ = entity;
 		other_ = other;
 		current_ = new Follow (entity,other);
+		MonoBehaviour.print ("I go to someone");
 	}
 	public override void playAction ()
 	{

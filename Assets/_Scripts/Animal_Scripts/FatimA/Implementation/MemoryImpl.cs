@@ -16,10 +16,14 @@ public class MemoryImpl : Fatima.Memory {
 		{
 			events_.RemoveAt(0); // the first element to far in the memory to have an impact to the memory
 		}
+
+		///use it for test your memory
+		/*
 		foreach (FatimaEvent ev in events_) 
 		{
 			MonoBehaviour.print(ev.getId());
 		}
+		*/
 	}
 	public bool isInMemory(FatimaEvent pevent)
 	{

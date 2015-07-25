@@ -17,6 +17,7 @@ public class WalkAround : AnimalAction
 	}
 	private void startAction()
 	{
+		MonoBehaviour.print ("I walk around");
 		Vector3 gotoSomewhere = entity_.transform.position + Random.insideUnitSphere * coef_;
 		gotoSomewhere.y = 0;
 		nav_.SetDestination (gotoSomewhere);

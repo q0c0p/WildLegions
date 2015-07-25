@@ -13,6 +13,7 @@ public class Follow : AnimalAction
 		other_ = other;
 		target_ = other_.transform.position;
 		nav_ = entity_.GetComponent<NavMeshAgent>();
+		MonoBehaviour.print ("I follow you my master!");
 		startAction ();
 	}
 	public override void playAction()

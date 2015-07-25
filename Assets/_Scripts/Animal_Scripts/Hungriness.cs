@@ -46,11 +46,11 @@ public class Hungriness : MonoBehaviour {
 		} 
 	}
 	void StartLookingForFood (float persistence) {
-		GetComponent<AnimalController>().setAction(new LookFor(gameObject));
+		//GetComponent<AnimalController>().setAction(new LookFor(gameObject));
 		print("I want to eat !!!");
 	}
 
 	void StopLookingForFood() {
-		GetComponent<AnimalController>().setAction(new WalkAround(gameObject));
+		//GetComponent<AnimalController>().setAction(new WalkAround(gameObject));
 	}
 }
