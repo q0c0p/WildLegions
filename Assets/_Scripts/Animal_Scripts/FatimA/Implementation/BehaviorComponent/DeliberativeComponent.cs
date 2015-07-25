@@ -4,8 +4,7 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 {
 	private Fatima.Memory memory_;
 	private Fatima.AffectiveState affectiveState_;
-	private AnimalAction action_ = null;
-	private float valueOfAction = 0.0;
+
 
 	public DeliberativeComponent (Fatima.Memory pmemory, Fatima.AffectiveState paffectiveState)
 	{

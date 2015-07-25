@@ -17,7 +17,6 @@ public class LookFor : AnimalAction {
 	}
 	public override void playAction()
 	{
-
 		action_.playAction ();
 	}
 	

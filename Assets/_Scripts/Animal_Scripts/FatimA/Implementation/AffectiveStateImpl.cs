@@ -7,6 +7,7 @@ public class AffectiveStateImpl : Fatima.AffectiveState {
 	public AffectiveStateImpl()
 	{
 	}
+
 	/**
 	 * In this basic implementation you add an emotion if this emotion doesn't exist 
 	 * If she exist you replace it 
