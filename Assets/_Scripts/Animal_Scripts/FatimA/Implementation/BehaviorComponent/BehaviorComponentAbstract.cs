@@ -40,7 +40,15 @@ public abstract class BehaviorComponentAbstract : Fatima.BehaviorComponent {
 
 	protected void setAction(AnimalAction paction)
 	{
-		action_ = paction;
+		if (action_ == null) {
+			action_ = paction;
+		}
+		else
+		{
+			if(!action_.sameAs(paction)){
+				action_ = paction;
+			}
+		}
 	}
 	
 	protected void setValue(float pvalue)

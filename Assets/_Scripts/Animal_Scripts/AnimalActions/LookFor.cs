@@ -23,11 +23,16 @@ public class LookFor : AnimalAction {
 	{
 		MonoBehaviour.print ("I start looking for");
 		action_ = new WalkAround (entity_);
-		action_.coef_ = 20;
+		action_.setCoef(8);
 	}
 	public override void playAction()
 	{
 		action_.playAction ();
 	}
-	
+	public override bool sameAs(AnimalAction action)
+	{
+		if (action is LookFor)
+			return true;
+		return false;
+	}
 }
