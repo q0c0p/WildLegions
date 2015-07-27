@@ -29,6 +29,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
 
+		//hack for UMA
+		public Animator UMAAnimator;
 
 		void Start()
 		{
@@ -40,6 +42,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
+		}
+
+		//hack to animate the UMA. 
+		void Update()
+		{
+			if (UMAAnimator == null) {
+				if (transform.Find("MyUMA").GetComponent<Animator>()){
+
+					UMAAnimator = transform.Find("MyUMA").GetComponent<Animator>();
+					Debug.Log("UMA Found");
+					m_Animator = UMAAnimator;
+					m_Animator.applyRootMotion = false;
+				}
+			}
 		}
 
 
@@ -212,13 +228,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				m_GroundNormal = hitInfo.normal;
 				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
+				//m_Animator.applyRootMotion = true;
 			}
 			else
 			{
 				m_IsGrounded = false;
 				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
+				//m_Animator.applyRootMotion = false;
 			}
 		}
 	}
