@@ -9,37 +9,21 @@ using Fatima;
  * and sends it to the current appraisal frame. 
  * */
 
-public class MotivationalComponent : AppraisalComponent {
+public class MotivationalComponent : AppraisalComponentAbstarct {
 
-	private Fatima.AppraisalFrame appraisalFrame_;
-	
 	public MotivationalComponent()
 	{
 	}
-	/**
-	 * not yet implemented 
-	 * this should update the hungriness
-	 * */
-	public void update()
-	{
-	}
-	public void update(FatimaEvent pevent)
-	{
-	}
+
 	/**
 	 * here we gonna start the appraisal of an event and store the appraisal variables into a appraisal frame
 	 * for this component we gonna make appraisal frame that treats the specials needs
 	 * */
-	public void startAppraisal(FatimaEvent pevent, AppraisalFrame aF)
+	public override void startAppraisal(FatimaEvent pevent, AppraisalFrame aF)
 	{
 		if (pevent is HungerEvent || pevent is TiredEvent) {
-			appraisalFrame_ = aF;
-			appraisalFrame_.add (new Desirability (4));
+			aF.add (new Desirability (4));
+			setAppraisalFrame(aF);
 		}
 	}
-
-	public AppraisalFrame continuousAppraisal()
-	{
-		return appraisalFrame_;
-	}	
 }
