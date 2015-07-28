@@ -19,7 +19,6 @@ public class Eat : AnimalAction
 			food_.SetActive(false);
 			MonoBehaviour.Destroy (food_);
 			food_ = null;
-			entity_.GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new TiredEvent());
 		}
 
 	}
