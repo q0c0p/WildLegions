@@ -6,7 +6,7 @@ using System.Collections;
  * This component is responsible of the threaten events
  * it will then generate some fear 
  * */
-public class ReactiveComponent : AppraisalComponentAbstarct {
+public class ReactiveComponent : AppraisalComponentAbstract {
 
 
 	public ReactiveComponent()

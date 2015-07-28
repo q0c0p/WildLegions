@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class AppraisalComponentAbstarct : Fatima.AppraisalComponent {
+public abstract class AppraisalComponentAbstract : Fatima.AppraisalComponent {
 
 	private Fatima.AppraisalFrame appraisalFrame_;
 
@@ -14,7 +14,7 @@ public abstract class AppraisalComponentAbstarct : Fatima.AppraisalComponent {
 		return appraisalFrame_;
 	}
 
-	public AppraisalComponentAbstarct()
+	public AppraisalComponentAbstract()
 	{
 	}
 
@@ -23,7 +23,6 @@ public abstract class AppraisalComponentAbstarct : Fatima.AppraisalComponent {
 	}
 	public void update(FatimaEvent pevent)
 	{
-		
 	}
 
 	public abstract void startAppraisal (FatimaEvent pevent, Fatima.AppraisalFrame aF);

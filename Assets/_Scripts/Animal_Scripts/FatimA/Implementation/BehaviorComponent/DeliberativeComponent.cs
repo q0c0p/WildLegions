@@ -47,7 +47,7 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 			setValue (tmpEmotion.getIntensity ());
 		} else if (tmpEmotion is Interest) {
 
-			if (tmpEmotion.getAppraisalFrame ().getEvent () is HungerEvent) {
+			if (tmpEmotion.getAppraisalFrame ().getEvent () is HungerEvent || tmpEmotion.getAppraisalFrame ().getEvent () is StarvingEvent) {
 				setAction (new LookFor (entity_, "Food"));
 				setValue (tmpEmotion.getIntensity ());
 			} else if (tmpEmotion.getAppraisalFrame ().getEvent () is TiredEvent) {
@@ -95,7 +95,10 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 				{
 					affectiveState_.getEmotionalSet().Remove(emotion);
 				}
+				setAction(new WalkAround(entity_));
+				setValue(3);
 			}
+
 		}
 		else if (tmpEmotion is Trust) {
 			///to be continued

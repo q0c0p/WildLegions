@@ -22,12 +22,7 @@ public class KittenAnimationAdapterImpl : NpcAnimationAdapterAbstract  {
 	public override void Idle(bool isIdle){
 		anim.SetBool ("isIdle", isIdle);
 	}
-	public override void Eat(){}
-	public override void Attack(){}
 	public override void Scream(){
 		anim.SetTrigger ("meows");
 	}
-	public override void Dance(bool isDancing){}
-
-	public override void Sleep(bool isSleeping){}
 }

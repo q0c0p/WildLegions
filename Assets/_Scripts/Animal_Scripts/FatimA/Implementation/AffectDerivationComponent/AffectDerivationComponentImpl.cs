@@ -32,10 +32,12 @@ public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
 	{
 
 	}
+
 	/**
 	 * This implementation of the function is more a basic translation between 
 	 * AppraisalVariables and Emotions but you can derive a more specific AffectDerivationComponent.
 	 * */
+
 	public Fatima.Emotion affectDerivation(Fatima.AppraisalFrame aF)
 	{
 

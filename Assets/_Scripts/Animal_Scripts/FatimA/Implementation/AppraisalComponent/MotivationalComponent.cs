@@ -9,7 +9,7 @@ using Fatima;
  * and sends it to the current appraisal frame. 
  * */
 
-public class MotivationalComponent : AppraisalComponentAbstarct {
+public class MotivationalComponent : AppraisalComponentAbstract {
 
 	public MotivationalComponent()
 	{
@@ -23,6 +23,11 @@ public class MotivationalComponent : AppraisalComponentAbstarct {
 	{
 		if (pevent is HungerEvent || pevent is TiredEvent) {
 			aF.add (new Desirability (4));
+			setAppraisalFrame(aF);
+		}
+		else if(pevent is StarvingEvent)
+		{
+			aF.add (new Desirability (6));
 			setAppraisalFrame(aF);
 		}
 		else if(pevent is FindSmthEvent)
