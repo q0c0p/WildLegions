@@ -3,14 +3,22 @@ using System.Collections;
 
 public class Eat : AnimalAction
 {
-	public Eat (GameObject entity)
+	GameObject food_;
+	public Eat (GameObject entity, GameObject food)
 	{ 
 		entity_ = entity;
+		food_ = food;
+		playAction ();
 	}
 	
 	public override void playAction()
 	{
 		MonoBehaviour.print ("I eat !");
+		if (food_ != null) {
+			entity_.GetComponent<Hungriness> ().globalHunger_ = 100f;
+			MonoBehaviour.Destroy (food_);
+			food_ = null;
+		}
 	}
 	public override bool sameAs(AnimalAction action)
 	{

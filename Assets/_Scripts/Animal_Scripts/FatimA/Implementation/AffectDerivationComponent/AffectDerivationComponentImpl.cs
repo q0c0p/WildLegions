@@ -56,6 +56,10 @@ public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
 			MonoBehaviour.print ("I found something");
 			return new Hope(currentAV.getValue(), currentAV.getValue(),aF);
 		}
+		if (currentAV is GoalSuccess) {
+			MonoBehaviour.print ("I catch ya");
+			return new Satisfaction(currentAV.getValue(), currentAV.getValue(),aF);
+		}
 		return null;
 	}
 }

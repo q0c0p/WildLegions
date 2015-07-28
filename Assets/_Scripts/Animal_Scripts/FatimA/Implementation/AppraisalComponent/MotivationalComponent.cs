@@ -37,5 +37,10 @@ public class MotivationalComponent : AppraisalComponentAbstarct {
 			aF.add(new GoalSuccess(10));
 			setAppraisalFrame(aF);
 		}
+		else if(pevent is EatFoodEvent)
+		{
+			aF.add(new GoalSuccess(10));
+			setAppraisalFrame(aF);
+		}
 	}
 }

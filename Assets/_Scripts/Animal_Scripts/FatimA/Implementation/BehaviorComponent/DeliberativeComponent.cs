@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DeliberativeComponent : BehaviorComponentAbstract
 {
@@ -58,6 +59,43 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 		} else if (tmpEmotion is Hope) {
 			setAction (new GoToSmth (entity_, tmpEmotion.getAppraisalFrame().getEvent().getWhoGO()));
 			setValue (tmpEmotion.getIntensity ());
+		}else if (tmpEmotion is Satisfaction){
+			if(tmpEmotion.getAppraisalFrame().getEvent() is GetFoodEvent)
+			{
+				setAction (new Eat (entity_, tmpEmotion.getAppraisalFrame ().getEvent ().getWhoGO ()));
+				setValue (tmpEmotion.getIntensity ());
+			}
+			if(tmpEmotion.getAppraisalFrame().getEvent() is EatFoodEvent)
+			{
+				List<Fatima.Emotion> toRemove = new List<Fatima.Emotion>();
+				foreach(Fatima.Emotion emotion in affectiveState_.getEmotionalSet())
+				{
+					if(emotion is Hope)
+					{
+						toRemove.Add(emotion);
+					}
+					if(emotion is Satisfaction)
+					{
+						if(emotion.getAppraisalFrame ().getEvent () is GetFoodEvent || 
+						   emotion.getAppraisalFrame ().getEvent () is EatFoodEvent )
+						{
+							toRemove.Add(emotion);
+						}
+					}
+					if(emotion is Interest)
+					{
+						if(emotion.getAppraisalFrame ().getEvent () is HungerEvent)
+						{
+							toRemove.Add(emotion);
+						}
+					}
+				}
+				toRemove.Add (tmpEmotion);
+				foreach(Fatima.Emotion emotion in toRemove)
+				{
+					affectiveState_.getEmotionalSet().Remove(emotion);
+				}
+			}
 		}
 		else if (tmpEmotion is Trust) {
 			///to be continued

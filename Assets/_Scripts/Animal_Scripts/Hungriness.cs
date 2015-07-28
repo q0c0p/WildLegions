@@ -22,6 +22,8 @@ public class Hungriness : MonoBehaviour {
 
 	}
 
+
+
 	IEnumerator HungerCoroutine () {
 
 		while (true) {
