@@ -64,9 +64,6 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 			{
 				setAction (new Eat (entity_, tmpEmotion.getAppraisalFrame ().getEvent ().getWhoGO ()));
 				setValue (tmpEmotion.getIntensity ());
-			}
-			if(tmpEmotion.getAppraisalFrame().getEvent() is EatFoodEvent)
-			{
 				List<Fatima.Emotion> toRemove = new List<Fatima.Emotion>();
 				foreach(Fatima.Emotion emotion in affectiveState_.getEmotionalSet())
 				{
@@ -76,8 +73,7 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 					}
 					if(emotion is Satisfaction)
 					{
-						if(emotion.getAppraisalFrame ().getEvent () is GetFoodEvent || 
-						   emotion.getAppraisalFrame ().getEvent () is EatFoodEvent )
+						if(emotion.getAppraisalFrame ().getEvent () is GetFoodEvent )
 						{
 							toRemove.Add(emotion);
 						}
@@ -95,8 +91,6 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 				{
 					affectiveState_.getEmotionalSet().Remove(emotion);
 				}
-				setAction(new WalkAround(entity_));
-				setValue(3);
 			}
 
 		}

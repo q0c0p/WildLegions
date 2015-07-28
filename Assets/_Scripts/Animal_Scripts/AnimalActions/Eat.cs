@@ -15,11 +15,11 @@ public class Eat : AnimalAction
 	{
 		MonoBehaviour.print ("I eat !");
 		if (food_ != null) {
-			entity_.GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new EatFoodEvent(food_));
 			entity_.GetComponent<Hungriness> ().globalHunger_ = 100f;
 			food_.SetActive(false);
 			MonoBehaviour.Destroy (food_);
 			food_ = null;
+			entity_.GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new TiredEvent());
 		}
 
 	}
