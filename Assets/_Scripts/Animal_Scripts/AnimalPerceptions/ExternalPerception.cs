@@ -40,13 +40,14 @@ public class ExternalPerception : MonoBehaviour {
 			}
 		}
 	}
+	/*
 	void OnTriggerStay(Collider other)
 	{
 		if (other.tag == "Player") {
 			Action action = other.gameObject.GetComponent<PlayerController>().getAction();
-
 		}
 	}
+	*/
 	public void setInterestTag(string interest)
 	{
 		interestGO_ = null;

@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalHunger_: 100
+  slider_: {fileID: 0}
 --- !u!114 &11441362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cf8a685046cff47975d703a1951a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalName: mouzou
+  animalName_: mougou
 --- !u!114 &11495284
 MonoBehaviour:
   m_ObjectHideFlags: 1

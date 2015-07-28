@@ -2,18 +2,16 @@
 using System.Collections;
 
 public class AnimalController : MonoBehaviour {
-	private Action action_;
-	private Fatima.FatimaCore artificialIntelligence_;
+	protected Action action_;
+	protected Fatima.FatimaCore artificialIntelligence_;
 	public string animalName_ = "mougou";
-
-
+	public NpcAnimationAdapter anim_;
 
 
 
 	// Use this for initialization
 	void Start () {
-		artificialIntelligence_ = new FatimaCoreImpl (gameObject);
-		action_ = new WalkAround(gameObject);
+
 	}
 
 	// Update is called once per frame
