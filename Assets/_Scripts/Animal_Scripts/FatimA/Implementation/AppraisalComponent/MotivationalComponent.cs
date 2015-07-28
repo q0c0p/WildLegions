@@ -25,5 +25,17 @@ public class MotivationalComponent : AppraisalComponentAbstarct {
 			aF.add (new Desirability (4));
 			setAppraisalFrame(aF);
 		}
+		else if(pevent is FindSmthEvent)
+		{
+			// really high value to lead him to the food 
+			aF.add (new GoalConduciveness(8));
+			aF.add (new Desirability (4));
+			setAppraisalFrame(aF);
+		}
+		else if(pevent is GetFoodEvent)
+		{
+			aF.add(new GoalSuccess(10));
+			setAppraisalFrame(aF);
+		}
 	}
 }

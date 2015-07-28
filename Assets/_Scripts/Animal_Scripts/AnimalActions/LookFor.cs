@@ -11,12 +11,14 @@ public class LookFor : AnimalAction {
 	{
 		interestGO_ = interest;
 		entity_ = entity;
+		entity_.GetComponentInChildren<ExternalPerception>().setInterestGO(interestGO_);
 		startAction ();
 	}
 	public LookFor(GameObject entity, string interest)
 	{
 		interestString_ = interest;
 		entity_ = entity;
+		entity_.GetComponentInChildren<ExternalPerception>().setInterestTag(interestString_);
 		startAction ();
 	}
 	private void startAction()

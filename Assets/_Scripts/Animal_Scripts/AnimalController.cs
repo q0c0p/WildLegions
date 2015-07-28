@@ -41,4 +41,5 @@ public class AnimalController : MonoBehaviour {
 	{
 		return artificialIntelligence_;
 	}
+
 }
