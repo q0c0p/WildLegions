@@ -141,6 +141,37 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d58f212c4f5c4334c95b8661a94518b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &180206732 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138772, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
+  m_PrefabInternal: {fileID: 1219394379}
+--- !u!54 &180206735
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180206732}
+  serializedVersion: 2
+  m_Mass: .200000003
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &180206739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180206732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5a5a69ae0e3cc43a50549807aa6ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalName_: KittySweety
 --- !u!1 &223449583
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +369,9 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 14373724, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
+    - {fileID: 11428594, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1297401484
