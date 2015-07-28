@@ -29,6 +29,10 @@ public abstract class AnimalAction : Action
 	{
 		return id_;
 	}
+	public virtual bool sameAs(AnimalAction action)
+	{
+		return false;
+	}
 }
 
 

@@ -12,6 +12,7 @@ public class FatimaCoreImpl : FatimaCoreAbstract {
 	 * first Affective state and Memory
 	 * after the component because some of them may need the memory and the affective state to work
 	 * */
+
 	public FatimaCoreImpl(GameObject entity)
 	{
 		entity_ = entity;

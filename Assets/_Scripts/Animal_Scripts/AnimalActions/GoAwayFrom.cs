@@ -31,4 +31,10 @@ public class GoAwayFrom : AnimalAction
 		direction = direction.normalized * distance_;
 		nav_.SetDestination(direction);
 	}
+	public override bool sameAs(AnimalAction action)
+	{
+		if (action is GoAwayFrom)
+			return true;
+		return false;
+	}
 }

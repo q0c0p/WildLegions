@@ -19,5 +19,9 @@ public class NearZoneTrigger : MonoBehaviour {
 	{
 		if (other.tag == "Player") {
 		}
+		if (other.tag == "Food") {
+			animal_.getArtificialIntelligence().sendEvent(new GetFoodEvent(other.gameObject));
+		}
 	}
+
 }

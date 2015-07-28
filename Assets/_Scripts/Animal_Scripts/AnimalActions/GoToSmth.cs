@@ -17,4 +17,10 @@ public class GoToSmth : AnimalAction {
 	{
 		current_.playAction ();
 	}
+	public override bool sameAs(AnimalAction action)
+	{
+		if (action is GoToSmth)
+			return true;
+		return false;
+	}
 }

@@ -13,5 +13,11 @@ public class Attack : AnimalAction
 	{
 		MonoBehaviour.print ("Attack!");
 	}
+	public override bool sameAs(AnimalAction action)
+	{
+		if (action is Attack)
+			return true;
+		return false;
+	}
 
 }

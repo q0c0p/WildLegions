@@ -5,17 +5,13 @@ using UnityEngine.UI;
 public class Hungriness : MonoBehaviour {
 
 	public float globalHunger_ = 100f;		//values to rendomize eventually
-	float hungryTrigger_;
-	float behaviourPersistence_;
+	float hungryTrigger_ = 60;
+	float starveTrigger_ = 30;
 	float hungrinessProgressRate_;
-	bool isLookingForFood;
 	public Slider slider_;
 
 	void Start () {
-		isLookingForFood = false;
-		hungryTrigger_ = 30f;
 		hungrinessProgressRate_ = 5f;
-		behaviourPersistence_ = 60f;
 		StartCoroutine(HungerCoroutine());
 	}
 
@@ -28,7 +24,7 @@ public class Hungriness : MonoBehaviour {
 
 	IEnumerator HungerCoroutine () {
 
-		while (true && globalHunger_ >0) {
+		while (true) {
 			DecreaseHungerState (hungrinessProgressRate_);
 			yield return new WaitForSeconds (2f);
 		}
@@ -38,16 +34,12 @@ public class Hungriness : MonoBehaviour {
 	
 	void DecreaseHungerState(float rate){
 		globalHunger_ -= rate;
-		print("I want to eat !!!");
-		GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
-		if (globalHunger_ < hungryTrigger_ && !isLookingForFood ) {
-			StartLookingForFood(behaviourPersistence_);
-			isLookingForFood = true;
+		if (globalHunger_ < hungryTrigger_  && globalHunger_ > starveTrigger_) {
+			GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
 		} 
-	}
-	void StartLookingForFood (float persistence) {
-		//GetComponent<AnimalController>().setAction(new LookFor(gameObject));
-		print("I want to eat !!!");
+		if (globalHunger_ < starveTrigger_ ) {
+			GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
+		} 
 	}
 
 	void StopLookingForFood() {

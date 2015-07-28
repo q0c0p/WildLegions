@@ -36,30 +36,28 @@ public class DeliberativeComponent : BehaviorComponentAbstract
 		if (tmpEmotion == null) {
 			setAction(new WalkAround(entity_));
 			setValue(3);
+			return ;
 		}
 		if (tmpEmotion is Fear) {
-			setAction(new GoAwayFrom(entity_,tmpEmotion.getAppraisalFrame().getEvent().getWhoGO()));
-			setValue(tmpEmotion.getIntensity());
-		}
-		else if (tmpEmotion is Hate) {
-			setAction(new Attack(entity_,tmpEmotion.getAppraisalFrame().getEvent().getWhoGO()));
-			setValue(tmpEmotion.getIntensity());
-		}
-		else if (tmpEmotion is Interest) {
+			setAction (new GoAwayFrom (entity_, tmpEmotion.getAppraisalFrame ().getEvent ().getWhoGO ()));
+			setValue (tmpEmotion.getIntensity ());
+		} else if (tmpEmotion is Hate) {
+			setAction (new Attack (entity_, tmpEmotion.getAppraisalFrame ().getEvent ().getWhoGO ()));
+			setValue (tmpEmotion.getIntensity ());
+		} else if (tmpEmotion is Interest) {
 
-			if(tmpEmotion.getAppraisalFrame().getEvent() is HungerEvent)
-			{
-				setAction(new LookFor(entity_,"Food"));
-				setValue(tmpEmotion.getIntensity());
-			}
-			else if (tmpEmotion.getAppraisalFrame().getEvent() is TiredEvent)
-			{
+			if (tmpEmotion.getAppraisalFrame ().getEvent () is HungerEvent) {
+				setAction (new LookFor (entity_, "Food"));
+				setValue (tmpEmotion.getIntensity ());
+			} else if (tmpEmotion.getAppraisalFrame ().getEvent () is TiredEvent) {
 				///to be continued
 			}
-		}
-		else if (tmpEmotion is Love) {
-			setAction(new Follow(entity_,tmpEmotion.getAppraisalFrame().getEvent().getWhoGO()));
-			setValue(tmpEmotion.getIntensity());
+		} else if (tmpEmotion is Love) {
+			setAction (new Follow (entity_, tmpEmotion.getAppraisalFrame ().getEvent ().getWhoGO ()));
+			setValue (tmpEmotion.getIntensity ());
+		} else if (tmpEmotion is Hope) {
+			setAction (new GoToSmth (entity_, tmpEmotion.getAppraisalFrame().getEvent().getWhoGO()));
+			setValue (tmpEmotion.getIntensity ());
 		}
 		else if (tmpEmotion is Trust) {
 			///to be continued

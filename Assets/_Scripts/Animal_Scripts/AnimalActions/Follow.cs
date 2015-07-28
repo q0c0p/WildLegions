@@ -26,7 +26,12 @@ public class Follow : AnimalAction
 	}
 	public void startAction()
 	{
-		Vector3 direction = other_.transform.position - entity_.transform.position;
-		nav_.SetDestination (direction);
+		nav_.SetDestination (other_.transform.position);
+	}
+	public override bool sameAs(AnimalAction action)
+	{
+		if (action is Follow)
+			return true;
+		return false;
 	}
 }

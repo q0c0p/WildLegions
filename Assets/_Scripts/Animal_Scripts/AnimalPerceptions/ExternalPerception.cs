@@ -30,13 +30,13 @@ public class ExternalPerception : MonoBehaviour {
 		if (interestTag_ != null) {
 			if (other.tag == interestTag_)
 			{
-				animal_.setAction(new GoToSmth(animal_.gameObject,other.gameObject));
+				animal_.getArtificialIntelligence().sendEvent(new FindSmthEvent(other.gameObject));
 			}
 		}
 		if (interestGO_ != null) {
 			if (other.gameObject == interestGO_)
 			{
-				animal_.setAction(new GoToSmth(animal_.gameObject,other.gameObject));
+				animal_.getArtificialIntelligence().sendEvent(new FindSmthEvent(other.gameObject));
 			}
 		}
 	}
