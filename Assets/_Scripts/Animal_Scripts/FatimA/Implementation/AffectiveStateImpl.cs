@@ -15,13 +15,29 @@ public class AffectiveStateImpl : Fatima.AffectiveState {
 	 * */
 	public void addEmotion(Fatima.Emotion pemotion)	
 	{
-		Fatima.Emotion emotionInList = null;
-		foreach (Fatima.Emotion emotion in emotionalSet) 
-			if(!pemotion.isDifferent(emotion))
-				emotionInList = emotion;
-		if (emotionInList != null)
-			emotionalSet.Remove (emotionInList);
-		emotionalSet.Add(pemotion);
+		if (pemotion != null) {
+			Fatima.Emotion emotionInList = null;
+			foreach (Fatima.Emotion emotion in emotionalSet) 
+				if (!pemotion.isDifferent (emotion))
+					emotionInList = emotion;
+			if (emotionInList != null)
+				emotionalSet.Remove (emotionInList);
+			emotionalSet.Add (pemotion);
+		}
+		printAffectiveState ();
+	}
+	/**
+	 * Use for debug into this class
+	 * */
+	void printAffectiveState()
+	{
+		MonoBehaviour.print("- Content of affective State -");
+		foreach(Fatima.Emotion emotion in emotionalSet)
+		{
+			MonoBehaviour.print(emotion);
+			MonoBehaviour.print(emotion.getIntensity());
+		}
+		MonoBehaviour.print("- End Content of affective State -");
 	}
 	/**
 	 * You may also need to get the emotions that compose actually the affective state

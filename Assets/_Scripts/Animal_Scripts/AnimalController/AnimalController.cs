@@ -10,8 +10,8 @@ public class AnimalController : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
-
+	protected void initialisation () {
+		StartCoroutine (UpdateAICoroutine());
 	}
 
 	// Update is called once per frame
@@ -38,6 +38,15 @@ public class AnimalController : MonoBehaviour {
 	public Fatima.FatimaCore getArtificialIntelligence()
 	{
 		return artificialIntelligence_;
+	}
+	IEnumerator UpdateAICoroutine () {
+		
+		while (true) {
+			artificialIntelligence_.update();
+			yield return new WaitForSeconds (2f);
+		}
+		
+		
 	}
 
 }

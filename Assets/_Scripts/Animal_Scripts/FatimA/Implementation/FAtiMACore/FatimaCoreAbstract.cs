@@ -115,11 +115,12 @@ public abstract class FatimaCoreAbstract : Fatima.FatimaCore {
 
 	protected void updateEmotion(Fatima.AppraisalFrame aF)
 	{
-		if (aF.hasChanged ()) {
-			foreach(Fatima.AffectDerivationComponent aD in affectDerivationComponents_)
-			{
-				Fatima.Emotion emotionTmp = aD.affectDerivation(aF);
-				affectiveState_.addEmotion(emotionTmp);
+		if (aF != null) {
+			if (aF.hasChanged ()) {
+				foreach (Fatima.AffectDerivationComponent aD in affectDerivationComponents_) {
+					Fatima.Emotion emotionTmp = aD.affectDerivation (aF);
+					affectiveState_.addEmotion (emotionTmp);
+				}
 			}
 		}
 	}

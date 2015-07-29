@@ -64,10 +64,14 @@ public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
 		if (currentAV is Like) {
 			if(currentAV.getValue() < 0)
 			{
+				MonoBehaviour.print("SomeBody ! call the police!");
 				return new Fear (currentAV.getValue (), currentAV.getValue (), aF);
 			}
 			else 
+			{
+				MonoBehaviour.print("I love ya");
 				return new Love (currentAV.getValue (), currentAV.getValue (), aF);
+			}
 		}
 		return null;
 	}

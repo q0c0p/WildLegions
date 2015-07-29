@@ -6,7 +6,7 @@ public class AppraisalVariableAbstract : Fatima.AppraisalVariable {
 	public virtual float getValue(){
 		return value_;
 	}
-	protected virtual void setValue(float value){
+	public virtual void setValue(float value){
 		value_ = value;
 	}
 }

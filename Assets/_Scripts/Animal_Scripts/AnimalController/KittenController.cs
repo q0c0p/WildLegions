@@ -7,5 +7,6 @@ public class KittenController : AnimalController {
 		artificialIntelligence_ = new FatimaCoreImpl (gameObject);
 		anim_ = new KittenAnimationAdapterImpl (gameObject);
 		action_ = new WalkAround(gameObject);
+		initialisation ();
 	}
 }

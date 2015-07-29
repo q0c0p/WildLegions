@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 
 /**
@@ -9,6 +10,36 @@ using System.Collections;
 public class ReactiveComponent : AppraisalComponentAbstract {
 
 
+	public override void update()
+	{
+		Fatima.AppraisalVariable tmpAppRemove = null;
+		Fatima.AppraisalVariable tmpAppNew = null;
+		if (getAppraisalFrame () != null) {
+			foreach (Fatima.AppraisalVariable appVariable in getAppraisalFrame().getFrameContent()) 
+			{
+				if (appVariable is Like) {
+					tmpAppRemove = appVariable;
+					if(Math.Abs(appVariable.getValue())>=1)
+					{
+						if (appVariable.getValue () > 0) {
+							tmpAppNew = new Like(appVariable.getValue () - 1);
+						} else {
+							tmpAppNew = new Like(appVariable.getValue () + 1);
+						}
+					}
+				}
+			}
+			if(tmpAppRemove != null)
+			{
+				getAppraisalFrame().getFrameContent().Remove(tmpAppRemove);
+				if(tmpAppNew != null)
+				{
+					getAppraisalFrame().add(tmpAppNew);
+				}
+			}
+
+		}
+	}
 	public ReactiveComponent()
 	{
 	}

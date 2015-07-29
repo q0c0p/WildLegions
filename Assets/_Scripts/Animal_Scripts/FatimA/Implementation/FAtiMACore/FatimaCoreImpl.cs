@@ -19,6 +19,7 @@ public class FatimaCoreImpl : FatimaCoreAbstract {
 		setAffectiveState (new AffectiveStateImpl());
 		setMemory (new MemoryImpl ());
 		addAppraisalComponent (new MotivationalComponent());
+		addAppraisalComponent (new ReactiveComponent());
 		addAffectDerivationComponent (new AffectDerivationComponentImpl());
 		addBehaviorComponent (new DeliberativeComponent(getMemory(),getAffectiveState(),entity_) );
 	}

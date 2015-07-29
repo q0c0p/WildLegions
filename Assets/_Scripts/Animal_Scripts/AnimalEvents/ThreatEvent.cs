@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class ThreatEvent : FatimaEventAbstract {
-	public ThreatEvent() : base()
+	public ThreatEvent(GameObject pgo) : base()
 	{
+		setWhoGO (pgo);
 	}
 }

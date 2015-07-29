@@ -18,10 +18,10 @@ public abstract class AppraisalComponentAbstract : Fatima.AppraisalComponent {
 	{
 	}
 
-	public void update()
+	public virtual void update()
 	{	
 	}
-	public void update(FatimaEvent pevent)
+	public virtual void update(FatimaEvent pevent)
 	{
 	}
 
