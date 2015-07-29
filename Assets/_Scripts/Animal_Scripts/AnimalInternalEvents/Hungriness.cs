@@ -40,7 +40,7 @@ public class Hungriness : MonoBehaviour {
 			GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
 		} 
 		if (globalHunger_ < starveTrigger_ ) {
-			GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new HungerEvent());
+			GetComponent<AnimalController> ().getArtificialIntelligence ().sendEvent (new StarvingEvent());
 		} 
 	}
 

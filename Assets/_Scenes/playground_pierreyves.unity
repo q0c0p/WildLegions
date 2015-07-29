@@ -988,6 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed_: 6
   rotateSpeed_: 50
+  animalsSeePlayer_: []
   smooth: 2
 --- !u!23 &1357187791
 MeshRenderer:
@@ -1306,11 +1307,11 @@ Prefab:
       objectReference: {fileID: 1357187794}
     - target: {fileID: 22487578, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22487578, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138772, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_Name

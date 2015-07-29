@@ -27,13 +27,13 @@ public class MotivationalComponent : AppraisalComponentAbstract {
 		}
 		else if(pevent is StarvingEvent)
 		{
-			aF.add (new Desirability (6));
+			aF.add (new Desirability (8));
 			setAppraisalFrame(aF);
 		}
 		else if(pevent is FindSmthEvent)
 		{
 			// really high value to lead him to the food 
-			aF.add (new GoalConduciveness(8));
+			aF.add (new GoalConduciveness(9));
 			aF.add (new Desirability (4));
 			setAppraisalFrame(aF);
 		}

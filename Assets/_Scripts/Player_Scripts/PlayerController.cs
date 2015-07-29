@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour {
 	public float speed_ = 6f;
 	public float rotateSpeed_ = 50f ;
 	private Action action_;
+	public List<AnimalController> animalsSeePlayer_ = new List<AnimalController>();
+
 	
 	public float smooth = 2.0F;
 	// Use this for initialization
@@ -32,9 +35,14 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			MonoBehaviour.print("The player attack!");
 			action_ = new PlayerAttack(gameObject);
+			FatimaEvent tmpEvent = action_.getEvent();
+			foreach(AnimalController animal in animalsSeePlayer_)
+				animal.getArtificialIntelligence().sendEvent(tmpEvent);
 		}
 		if (Input.GetButtonDown ("Fire2")) {
 			action_ = new PlayerFeed(gameObject);
+			foreach(AnimalController animal in animalsSeePlayer_)
+				animal.getArtificialIntelligence().sendEvent(action_.getEvent());
 		}
 	}
 
@@ -58,6 +66,17 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate(Vector3.forward* -speed_ * Time.deltaTime);
 		}
 	}
+
+	public void addAnimalObserver(AnimalController animal)
+	{
+		animalsSeePlayer_.Add (animal);
+	}
+	public void removeAnimalObserver(AnimalController animal)
+	{
+		animalsSeePlayer_.Remove (animal);
+	}
+
+
 
 
 }

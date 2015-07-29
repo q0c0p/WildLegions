@@ -21,7 +21,8 @@ public class ExternalPerception : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
-
+			MonoBehaviour.print("The player is there");
+			other.gameObject.GetComponent<PlayerController>().addAnimalObserver(animal_);
 		}
 
 
@@ -40,18 +41,17 @@ public class ExternalPerception : MonoBehaviour {
 			}
 		}
 	}
-	/*
-	void OnTriggerStay(Collider other)
+
+	void OnTriggerExit(Collider other)
 	{
 		if (other.tag == "Player") {
-			MonoBehaviour.print ("event trigger by the player ");
-			Action action = other.gameObject.GetComponent<PlayerController> ().getAction ();
-			if (action != null) {
-				GetComponentInParent<AnimalController> ().getArtificialIntelligence ().sendEvent (action.getEvent ());
-			}
+			MonoBehaviour.print("The player is outside");
+			other.gameObject.GetComponent<PlayerController>().removeAnimalObserver(animal_);
 		}
 	}
-	*/
+
+
+
 
 	public void setInterestTag(string interest)
 	{
