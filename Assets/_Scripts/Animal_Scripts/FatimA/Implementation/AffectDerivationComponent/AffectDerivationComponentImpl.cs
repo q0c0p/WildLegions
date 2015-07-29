@@ -42,25 +42,32 @@ public class AffectDerivationComponentImpl : Fatima.AffectDerivationComponent {
 	{
 
 		Fatima.AppraisalVariable currentAV = null;
-		float maxValue=0;
+		float maxValue = 0;
 		foreach (Fatima.AppraisalVariable av in aF.getFrameContent()) 
-			if(Math.Abs(av.getValue()) >= maxValue)
-			{
-				maxValue = Math.Abs(av.getValue());
+			if (Math.Abs (av.getValue ()) >= maxValue) {
+				maxValue = Math.Abs (av.getValue ());
 				currentAV = av;
 			}
 		
 		if (currentAV is Desirability) {
 			MonoBehaviour.print ("I want something");
-			return new Interest(currentAV.getValue(), currentAV.getValue(),aF);
+			return new Interest (currentAV.getValue (), currentAV.getValue (), aF);
 		}
 		if (currentAV is GoalConduciveness) {
 			MonoBehaviour.print ("I found something");
-			return new Hope(currentAV.getValue(), currentAV.getValue(),aF);
+			return new Hope (currentAV.getValue (), currentAV.getValue (), aF);
 		}
 		if (currentAV is GoalSuccess) {
 			MonoBehaviour.print ("I catch ya");
-			return new Satisfaction(currentAV.getValue(), currentAV.getValue(),aF);
+			return new Satisfaction (currentAV.getValue (), currentAV.getValue (), aF);
+		}
+		if (currentAV is Like) {
+			if(currentAV.getValue() < 0)
+			{
+				return new Fear (currentAV.getValue (), currentAV.getValue (), aF);
+			}
+			else 
+				return new Love (currentAV.getValue (), currentAV.getValue (), aF);
 		}
 		return null;
 	}

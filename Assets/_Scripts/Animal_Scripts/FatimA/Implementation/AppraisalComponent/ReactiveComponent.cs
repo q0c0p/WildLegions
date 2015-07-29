@@ -15,8 +15,7 @@ public class ReactiveComponent : AppraisalComponentAbstract {
 	public override void startAppraisal(FatimaEvent pevent, Fatima.AppraisalFrame aF)
 	{
 		if (pevent is ThreatEvent) {
-			aF.add (new Desirability (-8));
-			aF.add (new Like(-5));
+			aF.add (new Like(-9));
 			setAppraisalFrame(aF);
 		}
 	}
