@@ -27,9 +27,11 @@ public class MemoryImpl : Fatima.Memory {
 	}
 	public bool isInMemory(FatimaEvent pevent)
 	{
-		foreach ( FatimaEvent ev in events_)
-			if(ev.getId() == pevent.getId())
+		foreach (FatimaEvent ev in events_)
+			if (ev.getId () == pevent.getId ()) {
+				MonoBehaviour.print("this event is in memory!!");
 				return true;
+			}
 		return false;
 	}
 }

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		return action_;
 	}
-	
+
 	void FixedUpdate ()
 	{
 		Rotation ();
@@ -30,10 +30,11 @@ public class PlayerController : MonoBehaviour {
 	void GetKeyboardInput()
 	{
 		if (Input.GetButtonDown ("Fire1")) {
-			action_ = new PlayerAttack();
+			MonoBehaviour.print("The player attack!");
+			action_ = new PlayerAttack(gameObject);
 		}
 		if (Input.GetButtonDown ("Fire2")) {
-			action_ = new PlayerFeed();
+			action_ = new PlayerFeed(gameObject);
 		}
 	}
 

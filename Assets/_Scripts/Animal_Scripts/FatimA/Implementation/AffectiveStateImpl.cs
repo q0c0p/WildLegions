@@ -24,7 +24,7 @@ public class AffectiveStateImpl : Fatima.AffectiveState {
 				emotionalSet.Remove (emotionInList);
 			emotionalSet.Add (pemotion);
 		}
-		printAffectiveState ();
+		//printAffectiveState ();
 	}
 	/**
 	 * Use for debug into this class

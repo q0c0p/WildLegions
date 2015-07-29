@@ -1,10 +1,10 @@
-
+using UnityEngine;
 
 
 public class PlayerFeed : PlayerAction
 {
-	public PlayerFeed()
+	public PlayerFeed(GameObject go) : base(go)
 	{
-		setId ();
+		event_ = null;
 	}
 }

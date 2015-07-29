@@ -1,11 +1,9 @@
-
+using UnityEngine;
 
 public class PlayerAttack : PlayerAction
 {
-	public PlayerAttack ()
+	public PlayerAttack (GameObject go) : base(go)
 	{
-		setId ();
+		event_ = new ThreatEvent (go_);
 	}
 }
-
-

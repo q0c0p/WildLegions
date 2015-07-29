@@ -44,10 +44,15 @@ public class ExternalPerception : MonoBehaviour {
 	void OnTriggerStay(Collider other)
 	{
 		if (other.tag == "Player") {
-			Action action = other.gameObject.GetComponent<PlayerController>().getAction();
+			MonoBehaviour.print ("event trigger by the player ");
+			Action action = other.gameObject.GetComponent<PlayerController> ().getAction ();
+			if (action != null) {
+				GetComponentInParent<AnimalController> ().getArtificialIntelligence ().sendEvent (action.getEvent ());
+			}
 		}
 	}
 	*/
+
 	public void setInterestTag(string interest)
 	{
 		interestGO_ = null;

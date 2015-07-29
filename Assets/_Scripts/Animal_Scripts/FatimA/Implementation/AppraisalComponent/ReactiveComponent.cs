@@ -22,9 +22,9 @@ public class ReactiveComponent : AppraisalComponentAbstract {
 					if(Math.Abs(appVariable.getValue())>=1)
 					{
 						if (appVariable.getValue () > 0) {
-							tmpAppNew = new Like(appVariable.getValue () - 1);
+							tmpAppNew = new Like(appVariable.getValue () - 10*Time.deltaTime);
 						} else {
-							tmpAppNew = new Like(appVariable.getValue () + 1);
+							tmpAppNew = new Like(appVariable.getValue () + 10*Time.deltaTime);
 						}
 					}
 				}

@@ -155,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 15977947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .0399999991, z: -0}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -249,7 +249,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &66509883
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &335914076
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &823708375
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &918972561
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1098863340
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1357187788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &1406132793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,8 +1232,24 @@ Transform:
   m_LocalScale: {x: .438470185, y: .438470215, z: .438470215}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1001 &1505308459
+  m_RootOrder: 4
+--- !u!1 &1622951023 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138772, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
+  m_PrefabInternal: {fileID: 1930038010}
+--- !u!114 &1622951025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1622951023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf5a5a69ae0e3cc43a50549807aa6ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalName_: mougou
+--- !u!1001 &1930038010
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1250,7 +1266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426100, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 12.3400002
       objectReference: {fileID: 0}
     - target: {fileID: 426100, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1278,7 +1294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426100, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19524024, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_Speed
@@ -1290,29 +1306,21 @@ Prefab:
       objectReference: {fileID: 1357187794}
     - target: {fileID: 22487578, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22487578, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 138772, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
+      propertyPath: m_Name
+      value: Game Kitten (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469192, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
+      propertyPath: radiusZone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11428594, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1505308460 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 138772, guid: 3b51e3d52ea29cf4d9384b48619741de, type: 2}
-  m_PrefabInternal: {fileID: 1505308459}
---- !u!114 &1505308461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1505308460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5a5a69ae0e3cc43a50549807aa6ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalName_: mougou

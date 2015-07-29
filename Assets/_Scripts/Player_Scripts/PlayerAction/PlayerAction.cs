@@ -4,22 +4,29 @@ using System.Collections;
 public abstract class PlayerAction : Action {
 	static long autoIncId;
 	private long id_;
+	protected FatimaEvent event_;
+	protected GameObject go_;
+	public PlayerAction(GameObject pgo)
+	{
+		go_ = pgo;
+		setId ();
+	}
 	public void setId()
 	{
 		autoIncId++;
 		id_ = autoIncId;
 	}
-	public void playAction()
+	public virtual void playAction()
 	{
 	}
-	public void stopAction()
+	public virtual void stopAction()
 	{
 	}
-	public FatimaEvent getEvent()
+	public virtual FatimaEvent getEvent()
 	{
-		return null;
+		return event_;
 	}
-	public long getId()
+	public virtual long getId()
 	{
 		return id_;
 	}

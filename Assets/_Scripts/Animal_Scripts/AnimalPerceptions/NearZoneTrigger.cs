@@ -5,7 +5,7 @@ public class NearZoneTrigger : MonoBehaviour {
 
 	private AnimalController animal_;
 	private SphereCollider collider_;
-	public float radiusZone = 2.0f;
+	public float radiusZone = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,7 @@ public class NearZoneTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player") {
+			MonoBehaviour.print("near zone trigger");
 			animal_.getArtificialIntelligence().sendEvent(new ThreatEvent(other.gameObject));
 		}
 		if (other.tag == "Food") {
