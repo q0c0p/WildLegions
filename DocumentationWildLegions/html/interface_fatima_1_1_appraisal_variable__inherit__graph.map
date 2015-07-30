@@ -1,0 +1,9 @@
+<map id="Fatima.AppraisalVariable" name="Fatima.AppraisalVariable">
+<area shape="rect" id="node2" href="$class_appraisal_variable_abstract.html" title="{AppraisalVariableAbstract\n||+ getValue()\l+ setValue()\l}" alt="" coords="399,145,571,237"/>
+<area shape="rect" id="node3" href="$class_desirability.html" title="{Desirability\n||+ Desirability()\l}" alt="" coords="5,285,112,363"/>
+<area shape="rect" id="node4" href="$class_desirability_for_food.html" title="This appraisal variable show the desirability for food it is usually create by a hungryness event..." alt="" coords="136,285,291,363"/>
+<area shape="rect" id="node5" href="$class_desirability_for_sleep.html" title="{DesirabilityForSleep\n||+ DesirabilityForSleep()\l}" alt="" coords="315,285,474,363"/>
+<area shape="rect" id="node6" href="$class_goal_conduciveness.html" title="{GoalConduciveness\n||+ GoalConduciveness()\l}" alt="" coords="498,285,654,363"/>
+<area shape="rect" id="node7" href="$class_goal_success.html" title="{GoalSuccess\n||+ GoalSuccess()\l}" alt="" coords="679,285,799,363"/>
+<area shape="rect" id="node8" href="$class_like.html" title="{Like\n||+ Like()\l}" alt="" coords="823,285,889,363"/>
+</map>

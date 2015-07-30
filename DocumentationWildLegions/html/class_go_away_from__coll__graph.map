@@ -1,0 +1,4 @@
+<map id="GoAwayFrom" name="GoAwayFrom">
+<area shape="rect" id="node2" href="$class_animal_action.html" title="{AnimalAction\n|# entity_\l|+ setId()\l+ getEvent()\l+ playAction()\l+ stopAction()\l+ getId()\l+ sameAs()\l}" alt="" coords="14,175,118,325"/>
+<area shape="rect" id="node3" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="14,5,118,127"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="FatimaEventAbstract" name="FatimaEventAbstract">
+<area shape="rect" id="node3" href="$class_find_smth_event.html" title="{FindSmthEvent\n||+ FindSmthEvent()\l}" alt="" coords="5,315,136,392"/>
+<area shape="rect" id="node4" href="$class_get_food_event.html" title="{GetFoodEvent\n||+ GetFoodEvent()\l}" alt="" coords="161,315,285,392"/>
+<area shape="rect" id="node5" href="$class_hunger_event.html" title="{HungerEvent\n||+ HungerEvent()\l}" alt="" coords="309,315,424,392"/>
+<area shape="rect" id="node6" href="$class_receive_food_event.html" title="{ReceiveFoodEvent\n||+ ReceiveFoodEvent()\l}" alt="" coords="449,315,597,392"/>
+<area shape="rect" id="node7" href="$class_starving_event.html" title="{StarvingEvent\n||+ StarvingEvent()\l}" alt="" coords="621,315,741,392"/>
+<area shape="rect" id="node8" href="$class_threat_event.html" title="{ThreatEvent\n||+ ThreatEvent()\l}" alt="" coords="766,315,877,392"/>
+<area shape="rect" id="node9" href="$class_tired_event.html" title="{TiredEvent\n||+ TiredEvent()\l}" alt="" coords="901,315,1003,392"/>
+<area shape="rect" id="node2" href="$interface_fatima_event.html" title="This class is not part of the FAtiMA core model, however it useful to have an interface responsible f..." alt="" coords="469,5,576,97"/>
+</map>

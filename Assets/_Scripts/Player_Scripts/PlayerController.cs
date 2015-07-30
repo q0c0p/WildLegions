@@ -35,11 +35,11 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			MonoBehaviour.print("The player attack!");
 			action_ = new PlayerAttack(gameObject);
-			FatimaEvent tmpEvent = action_.getEvent();
 			foreach(AnimalController animal in animalsSeePlayer_)
-				animal.getArtificialIntelligence().sendEvent(tmpEvent);
+				animal.getArtificialIntelligence().sendEvent(action_.getEvent());
 		}
 		if (Input.GetButtonDown ("Fire2")) {
+			MonoBehaviour.print("The player feed the animals!");
 			action_ = new PlayerFeed(gameObject);
 			foreach(AnimalController animal in animalsSeePlayer_)
 				animal.getArtificialIntelligence().sendEvent(action_.getEvent());

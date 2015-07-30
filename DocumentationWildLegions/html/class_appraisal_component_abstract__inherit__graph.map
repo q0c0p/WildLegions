@@ -1,0 +1,6 @@
+<map id="AppraisalComponentAbstract" name="AppraisalComponentAbstract">
+<area shape="rect" id="node4" href="$class_motivational_component.html" title="This component models the basic agent&#39;s drives (=needs) such as energy, health... ..." alt="" coords="5,506,181,598"/>
+<area shape="rect" id="node5" href="$class_reactive_component.html" title="This component is responsible of the threaten events it will then generate some fear. " alt="" coords="205,499,363,605"/>
+<area shape="rect" id="node2" href="$interface_fatima_1_1_appraisal_component.html" title="The Appraisal Component is an object of the Appraisal Derivation process of the FAtiMA model This int..." alt="" coords="93,145,283,237"/>
+<area shape="rect" id="node3" href="$interface_fatima_1_1_component.html" title="This interface is extended by every FAtiMA component like AppraisalComponent and AffectDerivationComp..." alt="" coords="120,5,256,97"/>
+</map>

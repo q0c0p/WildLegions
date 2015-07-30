@@ -1,0 +1,4 @@
+<map id="Satisfaction" name="Satisfaction">
+<area shape="rect" id="node2" href="$class_emotion_abstract.html" title="{EmotionAbstract\n||+ EmotionAbstract()\l+ getIntensity()\l+ getValence()\l+ getAppraisalFrame()\l+ isDifferent()\l}" alt="" coords="5,175,156,311"/>
+<area shape="rect" id="node3" href="$interface_fatima_1_1_emotion.html" title="This interface represents emotions as defined in FatiMA theory. " alt="" coords="5,5,156,127"/>
+</map>

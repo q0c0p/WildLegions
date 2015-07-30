@@ -1,0 +1,10 @@
+<map id="AnimalAction" name="AnimalAction">
+<area shape="rect" id="node3" href="$class_attack.html" title="{Attack\n||+ Attack()\l+ playAction()\l+ sameAs()\l}" alt="" coords="5,381,108,487"/>
+<area shape="rect" id="node4" href="$class_eat.html" title="{Eat\n||+ Eat()\l+ playAction()\l+ sameAs()\l}" alt="" coords="132,381,235,487"/>
+<area shape="rect" id="node5" href="$class_follow.html" title="{Follow\n||+ Follow()\l+ playAction()\l+ startAction()\l+ sameAs()\l}" alt="" coords="259,373,364,495"/>
+<area shape="rect" id="node6" href="$class_go_away_from.html" title="{GoAwayFrom\n||+ GoAwayFrom()\l+ GoAwayFrom()\l+ sameAs()\l}" alt="" coords="388,381,509,487"/>
+<area shape="rect" id="node7" href="$class_go_to_smth.html" title="{GoToSmth\n||+ GoToSmth()\l+ playAction()\l+ sameAs()\l}" alt="" coords="534,381,638,487"/>
+<area shape="rect" id="node8" href="$class_look_for.html" title="{LookFor\n||+ LookFor()\l+ LookFor()\l+ playAction()\l+ sameAs()\l}" alt="" coords="663,373,765,495"/>
+<area shape="rect" id="node9" href="$class_walk_around.html" title="{WalkAround\n||+ WalkAround()\l+ playAction()\l+ setCoef()\l+ sameAs()\l}" alt="" coords="789,373,903,495"/>
+<area shape="rect" id="node2" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="397,5,501,127"/>
+</map>

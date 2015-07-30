@@ -1,0 +1,13 @@
+<map id="Action" name="Action">
+<area shape="rect" id="node2" href="$class_animal_action.html" title="{AnimalAction\n|# entity_\l|+ setId()\l+ getEvent()\l+ playAction()\l+ stopAction()\l+ getId()\l+ sameAs()\l}" alt="" coords="465,182,569,333"/>
+<area shape="rect" id="node10" href="$class_player_action.html" title="{PlayerAction\n|# event_\l# go_\l|+ PlayerAction()\l+ setId()\l+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="928,175,1044,340"/>
+<area shape="rect" id="node3" href="$class_attack.html" title="{Attack\n||+ Attack()\l+ playAction()\l+ sameAs()\l}" alt="" coords="5,395,108,502"/>
+<area shape="rect" id="node4" href="$class_eat.html" title="{Eat\n||+ Eat()\l+ playAction()\l+ sameAs()\l}" alt="" coords="132,395,235,502"/>
+<area shape="rect" id="node5" href="$class_follow.html" title="{Follow\n||+ Follow()\l+ playAction()\l+ startAction()\l+ sameAs()\l}" alt="" coords="259,388,364,509"/>
+<area shape="rect" id="node6" href="$class_go_away_from.html" title="{GoAwayFrom\n||+ GoAwayFrom()\l+ GoAwayFrom()\l+ sameAs()\l}" alt="" coords="388,395,509,502"/>
+<area shape="rect" id="node7" href="$class_go_to_smth.html" title="{GoToSmth\n||+ GoToSmth()\l+ playAction()\l+ sameAs()\l}" alt="" coords="534,395,638,502"/>
+<area shape="rect" id="node8" href="$class_look_for.html" title="{LookFor\n||+ LookFor()\l+ LookFor()\l+ playAction()\l+ sameAs()\l}" alt="" coords="663,388,765,509"/>
+<area shape="rect" id="node9" href="$class_walk_around.html" title="{WalkAround\n||+ WalkAround()\l+ playAction()\l+ setCoef()\l+ sameAs()\l}" alt="" coords="789,388,903,509"/>
+<area shape="rect" id="node11" href="$class_player_attack.html" title="{PlayerAttack\n||+ PlayerAttack()\l}" alt="" coords="927,410,1045,487"/>
+<area shape="rect" id="node12" href="$class_player_feed.html" title="{PlayerFeed\n||+ PlayerFeed()\l}" alt="" coords="1069,410,1177,487"/>
+</map>

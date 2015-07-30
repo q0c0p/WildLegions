@@ -1,0 +1,4 @@
+<map id="PlayerFeed" name="PlayerFeed">
+<area shape="rect" id="node2" href="$class_player_action.html" title="{PlayerAction\n|# event_\l# go_\l|+ PlayerAction()\l+ setId()\l+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="5,175,121,340"/>
+<area shape="rect" id="node3" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="11,5,115,127"/>
+</map>

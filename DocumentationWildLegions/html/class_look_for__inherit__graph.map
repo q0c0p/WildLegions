@@ -1,0 +1,4 @@
+<map id="LookFor" name="LookFor">
+<area shape="rect" id="node2" href="$class_animal_action.html" title="{AnimalAction\n|# entity_\l|+ setId()\l+ getEvent()\l+ playAction()\l+ stopAction()\l+ getId()\l+ sameAs()\l}" alt="" coords="5,175,109,325"/>
+<area shape="rect" id="node3" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="5,5,109,127"/>
+</map>

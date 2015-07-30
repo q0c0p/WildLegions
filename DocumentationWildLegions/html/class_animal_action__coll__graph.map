@@ -1,0 +1,3 @@
+<map id="AnimalAction" name="AnimalAction">
+<area shape="rect" id="node2" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="5,5,109,127"/>
+</map>

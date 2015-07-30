@@ -1,0 +1,5 @@
+<map id="KittenController" name="KittenController">
+<area shape="rect" id="node2" href="$class_animal_controller.html" title="{AnimalController\n|+ animalName_\l|+ setAction()\l+ getAction()\l+ getArtificialIntelligence()\l# initialisation()\l}" alt="" coords="165,263,335,384"/>
+<area shape="rect" id="node5" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="278,42,382,163"/>
+<area shape="rect" id="node6" href="$interface_npc_animation_adapter.html" title="{NpcAnimationAdapter\n||+ Walk()\l+ Run()\l+ Jump()\l+ Idle()\l+ Eat()\l+ Attack()\l+ Scream()\l+ Dance()\l+ Sleep()\l}" alt="" coords="407,5,555,200"/>
+</map>

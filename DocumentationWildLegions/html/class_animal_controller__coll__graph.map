@@ -1,0 +1,4 @@
+<map id="AnimalController" name="AnimalController">
+<area shape="rect" id="node4" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="278,42,382,163"/>
+<area shape="rect" id="node5" href="$interface_npc_animation_adapter.html" title="{NpcAnimationAdapter\n||+ Walk()\l+ Run()\l+ Jump()\l+ Idle()\l+ Eat()\l+ Attack()\l+ Scream()\l+ Dance()\l+ Sleep()\l}" alt="" coords="407,5,555,200"/>
+</map>

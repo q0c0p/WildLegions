@@ -1,0 +1,11 @@
+<map id="Fatima.Emotion" name="Fatima.Emotion">
+<area shape="rect" id="node2" href="$class_emotion_abstract.html" title="{EmotionAbstract\n||+ EmotionAbstract()\l+ getIntensity()\l+ getValence()\l+ getAppraisalFrame()\l+ isDifferent()\l}" alt="" coords="409,175,559,311"/>
+<area shape="rect" id="node3" href="$class_fear.html" title="{Fear\n||+ Fear()\l+ isDifferent()\l}" alt="" coords="5,359,104,451"/>
+<area shape="rect" id="node4" href="$class_hate.html" title="{Hate\n||+ Hate()\l+ isDifferent()\l}" alt="" coords="128,359,227,451"/>
+<area shape="rect" id="node5" href="$class_hope.html" title="{Hope\n||+ Hope()\l+ isDifferent()\l}" alt="" coords="251,359,349,451"/>
+<area shape="rect" id="node6" href="$class_interest.html" title="{Interest\n||+ Interest()\l+ isDifferent()\l}" alt="" coords="373,359,472,451"/>
+<area shape="rect" id="node7" href="$class_joy.html" title="{Joy\n||+ Joy()\l+ isDifferent()\l}" alt="" coords="496,359,595,451"/>
+<area shape="rect" id="node8" href="$class_love.html" title="{Love\n||+ Love()\l+ isDifferent()\l}" alt="" coords="619,359,717,451"/>
+<area shape="rect" id="node9" href="$class_satisfaction.html" title="{Satisfaction\n||+ Satisfaction()\l+ isDifferent()\l}" alt="" coords="742,359,853,451"/>
+<area shape="rect" id="node10" href="$class_trust.html" title="{Trust\n||+ Trust()\l+ isDifferent()\l}" alt="" coords="877,359,976,451"/>
+</map>

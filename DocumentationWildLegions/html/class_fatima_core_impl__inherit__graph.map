@@ -1,0 +1,4 @@
+<map id="FatimaCoreImpl" name="FatimaCoreImpl">
+<area shape="rect" id="node2" href="$class_fatima_core_abstract.html" title="{FatimaCoreAbstract\n|# action_\l# appraisalComponents_\l# behaviorComponents_\l# affectDerivationComponents_\l# affectiveState_\l# memory_\l|+ update()\l+ sendEvent()\l+ getAction()\l# addAppraisalComponent()\l# addAffectDerivationComponent()\l# addBehaviorComponent()\l# getAppraisalComponent()\l# getAffectDerivationComponent()\l# getBehaviorComponent()\l# setAffectiveState()\l# getAffectiveState()\l# setMemory()\l# getMemory()\l# fatimaPseudoCodeCore()\l# updateEmotion()\l# actionSelection()\l# newAppraisalFrame()\l}" alt="" coords="5,160,223,545"/>
+<area shape="rect" id="node3" href="$interface_fatima_1_1_fatima_core.html" title="This interface is between the the AnimalController and the FAtiMA implementation. ..." alt="" coords="45,5,183,112"/>
+</map>

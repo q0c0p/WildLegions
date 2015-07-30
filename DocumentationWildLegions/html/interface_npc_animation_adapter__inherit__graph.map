@@ -1,0 +1,3 @@
+<map id="NpcAnimationAdapter" name="NpcAnimationAdapter">
+<area shape="rect" id="node2" href="$class_npc_animation_adapter_abstract.html" title="{NpcAnimationAdapterAbstract\n|# entity_\l|+ NpcAnimationAdapterAbstract()\l+ Walk()\l+ Run()\l+ Jump()\l+ Idle()\l+ Eat()\l+ Attack()\l+ Scream()\l+ Dance()\l+ Sleep()\l}" alt="" coords="5,248,223,457"/>
+</map>

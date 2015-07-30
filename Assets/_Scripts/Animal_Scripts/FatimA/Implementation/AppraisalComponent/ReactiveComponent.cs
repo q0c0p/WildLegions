@@ -49,5 +49,9 @@ public class ReactiveComponent : AppraisalComponentAbstract {
 			aF.add (new Like(-9));
 			setAppraisalFrame(aF);
 		}
+		if (pevent is ReceiveFoodEvent) {
+			aF.add (new Like(6));
+			setAppraisalFrame(aF);
+		}
 	}
 }

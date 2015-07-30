@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interface_fatima_1_1_emotion.html" title="This interface represents emotions as defined in FatiMA theory. " alt="" coords="5,183,120,209"/>
+<area shape="rect" id="node2" href="$class_emotion_abstract.html" title="EmotionAbstract" alt="" coords="168,183,287,209"/>
+<area shape="rect" id="node3" href="$class_fear.html" title="Fear" alt="" coords="356,5,404,32"/>
+<area shape="rect" id="node4" href="$class_hate.html" title="Hate" alt="" coords="355,56,405,83"/>
+<area shape="rect" id="node5" href="$class_hope.html" title="Hope" alt="" coords="354,107,406,133"/>
+<area shape="rect" id="node6" href="$class_interest.html" title="Interest" alt="" coords="347,157,413,184"/>
+<area shape="rect" id="node7" href="$class_joy.html" title="Joy" alt="" coords="359,208,401,235"/>
+<area shape="rect" id="node8" href="$class_love.html" title="Love" alt="" coords="356,259,404,285"/>
+<area shape="rect" id="node9" href="$class_satisfaction.html" title="Satisfaction" alt="" coords="335,309,425,336"/>
+<area shape="rect" id="node10" href="$class_trust.html" title="Trust" alt="" coords="355,360,405,387"/>
+</map>

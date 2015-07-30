@@ -1,0 +1,4 @@
+<map id="Fatima.FatimaCore" name="Fatima.FatimaCore">
+<area shape="rect" id="node2" href="$class_fatima_core_abstract.html" title="{FatimaCoreAbstract\n|# action_\l# appraisalComponents_\l# behaviorComponents_\l# affectDerivationComponents_\l# affectiveState_\l# memory_\l|+ update()\l+ sendEvent()\l+ getAction()\l# addAppraisalComponent()\l# addAffectDerivationComponent()\l# addBehaviorComponent()\l# getAppraisalComponent()\l# getAffectDerivationComponent()\l# getBehaviorComponent()\l# setAffectiveState()\l# getAffectiveState()\l# setMemory()\l# getMemory()\l# fatimaPseudoCodeCore()\l# updateEmotion()\l# actionSelection()\l# newAppraisalFrame()\l}" alt="" coords="5,160,223,545"/>
+<area shape="rect" id="node3" href="$class_fatima_core_impl.html" title="{FatimaCoreImpl\n||+ FatimaCoreImpl()\l# actionSelection()\l# newAppraisalFrame()\l}" alt="" coords="37,593,191,700"/>
+</map>

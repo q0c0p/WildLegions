@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interface_fatima_1_1_component.html" title="This interface is extended by every FAtiMA component like AppraisalComponent and AffectDerivationComp..." alt="" coords="5,56,137,83"/>
+<area shape="rect" id="node2" href="$interface_fatima_1_1_affect_derivation_component.html" title="AffectDerivation component reflect the affect derivation process in FAtiMA model it is responsible to..." alt="" coords="185,5,407,32"/>
+<area shape="rect" id="node4" href="$interface_fatima_1_1_appraisal_component.html" title="The Appraisal Component is an object of the Appraisal Derivation process of the FAtiMA model This int..." alt="" coords="203,56,389,83"/>
+<area shape="rect" id="node8" href="$interface_fatima_1_1_behavior_component.html" title="A BehaviorComponent is used to choose the final action each components will influence the choose of t..." alt="" coords="205,107,387,133"/>
+<area shape="rect" id="node3" href="$class_affect_derivation_component_impl.html" title="This class is an implementation to derive emotions from appraisal. " alt="" coords="455,5,656,32"/>
+<area shape="rect" id="node5" href="$class_appraisal_component_abstract.html" title="AppraisalComponentAbstract" alt="" coords="460,56,651,83"/>
+<area shape="rect" id="node6" href="$class_motivational_component.html" title="This component models the basic agent&#39;s drives (=needs) such as energy, health... ..." alt="" coords="704,5,860,32"/>
+<area shape="rect" id="node7" href="$class_reactive_component.html" title="This component is responsible of the threaten events it will then generate some fear. " alt="" coords="713,56,851,83"/>
+<area shape="rect" id="node9" href="$class_behavior_component_abstract.html" title="BehaviorComponentAbstract" alt="" coords="462,107,649,133"/>
+<area shape="rect" id="node10" href="$class_deliberative_component.html" title="DeliberativeComponent" alt="" coords="705,107,859,133"/>
+</map>

@@ -18,10 +18,13 @@ public class Follow : AnimalAction
 	}
 	public override void playAction()
 	{
-		if(other_.transform.position != target_)
+		if(Vector3.Distance(other_.transform.position, target_) > 1)
 		{
 			target_ = other_.transform.position;
 			startAction ();
+		}
+		if (Vector3.Distance (entity_.transform.position, target_) < 4) {
+			nav_.Stop();
 		}
 	}
 	public void startAction()

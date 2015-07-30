@@ -1,0 +1,4 @@
+<map id="WalkAround" name="WalkAround">
+<area shape="rect" id="node2" href="$class_animal_action.html" title="{AnimalAction\n|# entity_\l|+ setId()\l+ getEvent()\l+ playAction()\l+ stopAction()\l+ getId()\l+ sameAs()\l}" alt="" coords="10,175,114,325"/>
+<area shape="rect" id="node3" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="10,5,114,127"/>
+</map>

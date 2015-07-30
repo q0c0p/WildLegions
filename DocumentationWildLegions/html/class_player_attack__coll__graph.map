@@ -1,0 +1,5 @@
+<map id="PlayerAttack" name="PlayerAttack">
+<area shape="rect" id="node2" href="$class_player_action.html" title="{PlayerAction\n|# go_\l|+ PlayerAction()\l+ setId()\l+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="63,189,179,340"/>
+<area shape="rect" id="node3" href="$interface_action.html" title="{Action\n||+ playAction()\l+ stopAction()\l+ getEvent()\l+ getId()\l}" alt="" coords="5,5,109,127"/>
+<area shape="rect" id="node4" href="$interface_fatima_event.html" title="This class is not part of the FAtiMA core model, however it useful to have an interface responsible f..." alt="" coords="133,20,240,112"/>
+</map>

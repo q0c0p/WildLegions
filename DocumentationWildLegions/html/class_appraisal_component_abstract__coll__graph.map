@@ -1,0 +1,4 @@
+<map id="AppraisalComponentAbstract" name="AppraisalComponentAbstract">
+<area shape="rect" id="node2" href="$interface_fatima_1_1_appraisal_component.html" title="The Appraisal Component is an object of the Appraisal Derivation process of the FAtiMA model This int..." alt="" coords="15,145,206,237"/>
+<area shape="rect" id="node3" href="$interface_fatima_1_1_component.html" title="This interface is extended by every FAtiMA component like AppraisalComponent and AffectDerivationComp..." alt="" coords="43,5,179,97"/>
+</map>

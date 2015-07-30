@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interface_fatima_1_1_fatima_core.html" title="This interface is between the the AnimalController and the FAtiMA implementation. ..." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node2" href="$class_fatima_core_abstract.html" title="FatimaCoreAbstract" alt="" coords="187,5,325,32"/>
+<area shape="rect" id="node3" href="$class_fatima_core_impl.html" title="FatimaCoreImpl" alt="" coords="373,5,487,32"/>
+</map>

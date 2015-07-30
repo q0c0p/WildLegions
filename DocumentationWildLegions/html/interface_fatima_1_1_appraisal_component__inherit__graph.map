@@ -1,0 +1,6 @@
+<map id="Fatima.AppraisalComponent" name="Fatima.AppraisalComponent">
+<area shape="rect" id="node3" href="$class_appraisal_component_abstract.html" title="{AppraisalComponentAbstract\n||+ AppraisalComponentAbstract()\l+ update()\l+ update()\l+ startAppraisal()\l+ continuousAppraisal()\l# setAppraisalFrame()\l# getAppraisalFrame()\l}" alt="" coords="83,285,293,451"/>
+<area shape="rect" id="node2" href="$interface_fatima_1_1_component.html" title="This interface is extended by every FAtiMA component like AppraisalComponent and AffectDerivationComp..." alt="" coords="120,5,256,97"/>
+<area shape="rect" id="node4" href="$class_motivational_component.html" title="This component models the basic agent&#39;s drives (=needs) such as energy, health... ..." alt="" coords="5,506,181,598"/>
+<area shape="rect" id="node5" href="$class_reactive_component.html" title="This component is responsible of the threaten events it will then generate some fear. " alt="" coords="205,499,363,605"/>
+</map>

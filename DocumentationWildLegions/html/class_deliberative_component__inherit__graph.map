@@ -1,0 +1,5 @@
+<map id="DeliberativeComponent" name="DeliberativeComponent">
+<area shape="rect" id="node2" href="$class_behavior_component_abstract.html" title="{BehaviorComponentAbstract\n|# action_\l# valueOfAction\l|+ BehaviorComponentAbstract()\l+ update()\l+ update()\l+ actionSelection()\l+ getAction()\l+ getValue()\l# setAction()\l# setValue()\l}" alt="" coords="5,300,212,495"/>
+<area shape="rect" id="node3" href="$interface_fatima_1_1_behavior_component.html" title="A BehaviorComponent is used to choose the final action each components will influence the choose of t..." alt="" coords="16,145,201,252"/>
+<area shape="rect" id="node4" href="$interface_fatima_1_1_component.html" title="This interface is extended by every FAtiMA component like AppraisalComponent and AffectDerivationComp..." alt="" coords="41,5,177,97"/>
+</map>

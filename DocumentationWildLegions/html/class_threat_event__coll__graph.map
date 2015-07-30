@@ -1,0 +1,4 @@
+<map id="ThreatEvent" name="ThreatEvent">
+<area shape="rect" id="node2" href="$class_fatima_event_abstract.html" title="This is the abstract implementation of event it is usefull to make it because we need to have some pr..." alt="" coords="5,145,168,267"/>
+<area shape="rect" id="node3" href="$interface_fatima_event.html" title="This class is not part of the FAtiMA core model, however it useful to have an interface responsible f..." alt="" coords="33,5,140,97"/>
+</map>
